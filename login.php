@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -56,18 +58,13 @@
   <!-- ======= Login ======= -->
 <section id="cta" class="cta">
         <div class="d-flex justify-content-center">
-
-         <div class="section-title align-items">
-              <br>
-              </br>
-              <br>
-              </br>  
+         
+         <div class="section-title align-items py-5">  
               <form>
-              
               <h2 class="text-light">Login</h2> 
                     
                       <div class="col-md-13">             
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Usuário" required="" autofocus="">
+                        <input type="CNPJ" id="inputnumber" class="form-control" placeholder="CNPJ" required="" autofocus="">
                         <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required="">
                       </div>
                     
@@ -85,14 +82,7 @@
 
 
     <section id="cta" class="cta">
-        <div class="container aos-init aos-animate" data-aos="zoom-in">
-
-            <div class="row">
-                
-  
-            </div>
 
         </div>
     </section>
-
 </main>
