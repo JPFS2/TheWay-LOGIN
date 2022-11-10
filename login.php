@@ -1,11 +1,6 @@
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
 
-use App\Communication\Email;
-
-
-if (isset($_POST['btnEnviar']) and !empty($_POST['btnEnviar'])) {
 
 
 
