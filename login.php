@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -55,34 +53,46 @@
     </div>
   </header> <!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex align-items-center">
-        <div class="container" data-aos="fade-up">
+  <!-- ======= Login ======= -->
+<section id="cta" class="cta">
+        <div class="d-flex justify-content-center">
 
-         <div class="section-title">
-                <h2>Login</h2>
-                <form>
-                 <div class="form-group col-md-4">
-                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
-                </div>
-                 <div class="form-group col-md-4">
-                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
-                 </div>
-                </form>
+         <div class="section-title align-items">
+              <br>
+              </br>
+              <br>
+              </br>  
+              <form>
+              
+              <h2 class="text-light">Login</h2> 
+                    
+                      <div class="col-md-13">             
+                        <input type="email" id="inputEmail" class="form-control" placeholder="Usuário" required="" autofocus="">
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required="">
+                      </div>
+                    
+                    
                 <div>
-                    <a href="" class="btn-get-started scrollto">Entrar</a>
+                  <a class="cta-btn align-middle" href="contato.php">Entrar</a>
                 </div>
-            <div>
-                <a href="#" class="btn-learn-more">Registrar</a>            
-            </div>
-        </div>        
-            
-
- </section>
-
-
+                <div>
+                  <a href="#" class="btn-learn-more">Registrar</a>            
+                  </div>
+              </form>     
+              </div>        
+        </div>    
 </section>
- <!-- ======= Downloads ======= -->
- 
+
+
+    <section id="cta" class="cta">
+        <div class="container aos-init aos-animate" data-aos="zoom-in">
+
+            <div class="row">
+                
+  
+            </div>
+
+        </div>
+    </section>
 
 </main>
