@@ -56,18 +56,21 @@
 
     <!-- ======= Login ======= -->
     <section id="cta" class="cta">
-        <div class="d-flex justify-content-center">
-
-            <div class="section-title align-items py-5">
+        <div class="d-flex justify-content-center py-3">
+            <div class="section-title align-items py-4">
                 <form>
                     <h2 class="text-light">Login</h2>
 
-                    <div class="col-md-13">
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Usuário" required=""
-                            autofocus="">
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required="">
+                    <div class="col-md-14">
+                        <div class="row py-1">
+                            <input type="email" id="inputEmail" class="form-control" placeholder="Usuário" required=""
+                                autofocus="">
+                        </div>
+                        <div class="row py-1">
+                            <input type="password" id="inputPassword" class="form-control" placeholder="Senha"
+                                required="">
+                        </div>
                     </div>
-
 
                     <div>
                         <a class="cta-btn align-middle" href="admin.php">Entrar</a>
