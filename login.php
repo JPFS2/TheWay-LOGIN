@@ -54,6 +54,7 @@
         </div>
     </header> <!-- End Header -->
 
+<<<<<<< HEAD
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
         <div class="container" data-aos="fade-up">
@@ -69,10 +70,27 @@
                         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
                     </div>
                 </form>
+=======
+  <!-- ======= Login ======= -->
+<section id="cta" class="cta">
+        <div class="d-flex justify-content-center">
+         
+         <div class="section-title align-items py-5">  
+              <form>
+              <h2 class="text-light">Login</h2> 
+                    
+                      <div class="col-md-13">             
+                        <input type="CNPJ" id="inputnumber" class="form-control" placeholder="CNPJ" required="" autofocus="">
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required="">
+                      </div>
+                    
+                    
+>>>>>>> c61ac780c3ec8abacf1f90202bcb7949b95285c9
                 <div>
-                    <a href="" class="btn-get-started scrollto">Entrar</a>
+                  <a class="cta-btn align-middle" href="contato.php">Entrar</a>
                 </div>
                 <div>
+<<<<<<< HEAD
                     <a href="#" class="btn-learn-more">Registrar</a>
                 </div>
             </div>
@@ -86,3 +104,18 @@
 
 
     </main>
+=======
+                  <a href="#" class="btn-learn-more">Registrar</a>            
+                  </div>
+              </form>     
+              </div>        
+        </div>    
+</section>
+
+
+    <section id="cta" class="cta">
+
+        </div>
+    </section>
+</main>
+>>>>>>> c61ac780c3ec8abacf1f90202bcb7949b95285c9
