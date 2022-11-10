@@ -76,7 +76,7 @@
 
           <li><a class="nav-link scrollto" href="#contato">Contato</a></li>
           <li><a class="nav-link scrollto" href="sistema.php">Downloads</a></li>
-          <li><a class="getstarted scrollto" href="loginn.php">Entrar</a></li>
+          <li><a class="getstarted scrollto" href="login.php">Entrar</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

@@ -2,6 +2,7 @@
 <html lang="pt-br">
 
 <head>
+
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -34,18 +35,19 @@
 </head>
 
 <body>
+
     <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Company name</a>
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6"> <img src="assets/img/logoT.png" alt="Logo"></a>
         <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search"
-            aria-label="Search">
+        <input class="form-control form-control-dark w-100 rounded-20 border-0" type="text" placeholder="Pesquisar"
+            aria-label="Pesquisar">
         <div class="navbar-nav">
             <div class="nav-item text-nowrap">
-                <a class="nav-link px-3" href="#">Sign out</a>
+                <a class="nav-link px-3" href="login.php">Sair</a>
             </div>
         </div>
     </header>
@@ -54,89 +56,250 @@
         <div class="row">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
                 <div class="position-sticky pt-3 sidebar-sticky">
-                    <ul class="nav flex-column">
+                    <ul class="nav sidebar-nav" id="sidebar-nav">
+
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-home align-text-bottom"
-                                    aria-hidden="true">
-                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                                </svg>
-                                Dashboard
+                            <a class="nav-link " href="index.html">
+                                <i class="bi bi-grid"></i>
+                                <span>Dashboard</span>
                             </a>
-                        </li>
+                        </li><!-- End Dashboard Nav -->
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-file align-text-bottom"
-                                    aria-hidden="true">
-                                    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
-                                    <polyline points="13 2 13 9 20 9"></polyline>
-                                </svg>
-                                Orders
+                            <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse"
+                                href="#">
+                                <i class="bi bi-menu-button-wide"></i><span>Components</span><i
+                                    class="bi bi-chevron-down ms-auto"></i>
                             </a>
-                        </li>
+                            <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                                <li>
+                                    <a href="components-alerts.html">
+                                        <i class="bi bi-circle"></i><span>Alerts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="components-accordion.html">
+                                        <i class="bi bi-circle"></i><span>Accordion</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="components-badges.html">
+                                        <i class="bi bi-circle"></i><span>Badges</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="components-breadcrumbs.html">
+                                        <i class="bi bi-circle"></i><span>Breadcrumbs</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="components-buttons.html">
+                                        <i class="bi bi-circle"></i><span>Buttons</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="components-cards.html">
+                                        <i class="bi bi-circle"></i><span>Cards</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="components-carousel.html">
+                                        <i class="bi bi-circle"></i><span>Carousel</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="components-list-group.html">
+                                        <i class="bi bi-circle"></i><span>List group</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="components-modal.html">
+                                        <i class="bi bi-circle"></i><span>Modal</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="components-tabs.html">
+                                        <i class="bi bi-circle"></i><span>Tabs</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="components-pagination.html">
+                                        <i class="bi bi-circle"></i><span>Pagination</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="components-progress.html">
+                                        <i class="bi bi-circle"></i><span>Progress</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="components-spinners.html">
+                                        <i class="bi bi-circle"></i><span>Spinners</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="components-tooltips.html">
+                                        <i class="bi bi-circle"></i><span>Tooltips</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li><!-- End Components Nav -->
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-shopping-cart align-text-bottom"
-                                    aria-hidden="true">
-                                    <circle cx="9" cy="21" r="1"></circle>
-                                    <circle cx="20" cy="21" r="1"></circle>
-                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                                </svg>
-                                Products
+                            <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse"
+                                href="#">
+                                <i class="bi bi-journal-text"></i><span>Forms</span><i
+                                    class="bi bi-chevron-down ms-auto"></i>
                             </a>
-                        </li>
+                            <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                                <li>
+                                    <a href="forms-elements.html">
+                                        <i class="bi bi-circle"></i><span>Form Elements</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="forms-layouts.html">
+                                        <i class="bi bi-circle"></i><span>Form Layouts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="forms-editors.html">
+                                        <i class="bi bi-circle"></i><span>Form Editors</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="forms-validation.html">
+                                        <i class="bi bi-circle"></i><span>Form Validation</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li><!-- End Forms Nav -->
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-users align-text-bottom"
-                                    aria-hidden="true">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="9" cy="7" r="4"></circle>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                </svg>
-                                Customers
+                            <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse"
+                                href="#">
+                                <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i
+                                    class="bi bi-chevron-down ms-auto"></i>
                             </a>
-                        </li>
+                            <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                                <li>
+                                    <a href="tables-general.html">
+                                        <i class="bi bi-circle"></i><span>General Tables</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tables-data.html">
+                                        <i class="bi bi-circle"></i><span>Data Tables</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li><!-- End Tables Nav -->
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-bar-chart-2 align-text-bottom"
-                                    aria-hidden="true">
-                                    <line x1="18" y1="20" x2="18" y2="10"></line>
-                                    <line x1="12" y1="20" x2="12" y2="4"></line>
-                                    <line x1="6" y1="20" x2="6" y2="14"></line>
-                                </svg>
-                                Reports
+                            <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse"
+                                href="#">
+                                <i class="bi bi-bar-chart"></i><span>Charts</span><i
+                                    class="bi bi-chevron-down ms-auto"></i>
                             </a>
-                        </li>
+                            <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                                <li>
+                                    <a href="charts-chartjs.html">
+                                        <i class="bi bi-circle"></i><span>Chart.js</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="charts-apexcharts.html">
+                                        <i class="bi bi-circle"></i><span>ApexCharts</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="charts-echarts.html">
+                                        <i class="bi bi-circle"></i><span>ECharts</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li><!-- End Charts Nav -->
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-layers align-text-bottom"
-                                    aria-hidden="true">
-                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                                    <polyline points="2 17 12 22 22 17"></polyline>
-                                    <polyline points="2 12 12 17 22 12"></polyline>
-                                </svg>
-                                Integrations
+                            <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse"
+                                href="#">
+                                <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>
                             </a>
-                        </li>
+                            <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                                <li>
+                                    <a href="icons-bootstrap.html">
+                                        <i class="bi bi-circle"></i><span>Bootstrap Icons</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="icons-remix.html">
+                                        <i class="bi bi-circle"></i><span>Remix Icons</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="icons-boxicons.html">
+                                        <i class="bi bi-circle"></i><span>Boxicons</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li><!-- End Icons Nav -->
+
+                        <li class="nav-heading">Pages</li>
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="users-profile.html">
+                                <i class="bi bi-person"></i>
+                                <span>Profile</span>
+                            </a>
+                        </li><!-- End Profile Page Nav -->
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="pages-faq.html">
+                                <i class="bi bi-question-circle"></i>
+                                <span>F.A.Q</span>
+                            </a>
+                        </li><!-- End F.A.Q Page Nav -->
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="pages-contact.html">
+                                <i class="bi bi-envelope"></i>
+                                <span>Contact</span>
+                            </a>
+                        </li><!-- End Contact Page Nav -->
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="pages-register.html">
+                                <i class="bi bi-card-list"></i>
+                                <span>Register</span>
+                            </a>
+                        </li><!-- End Register Page Nav -->
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="pages-login.html">
+                                <i class="bi bi-box-arrow-in-right"></i>
+                                <span>Login</span>
+                            </a>
+                        </li><!-- End Login Page Nav -->
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="pages-error-404.html">
+                                <i class="bi bi-dash-circle"></i>
+                                <span>Error 404</span>
+                            </a>
+                        </li><!-- End Error 404 Page Nav -->
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="pages-blank.html">
+                                <i class="bi bi-file-earmark"></i>
+                                <span>Blank</span>
+                            </a>
+                        </li><!-- End Blank Page Nav -->
+
                     </ul>
 
                     <h6
                         class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
-                        <span>Saved reports</span>
+                        <span>Relatório salvos</span>
                         <a class="link-secondary" href="#" aria-label="Add a new report">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -161,7 +324,7 @@
                                     <line x1="16" y1="17" x2="8" y2="17"></line>
                                     <polyline points="10 9 9 9 8 9"></polyline>
                                 </svg>
-                                Current month
+                                Mês Atual
                             </a>
                         </li>
                         <li class="nav-item">
@@ -176,37 +339,7 @@
                                     <line x1="16" y1="17" x2="8" y2="17"></line>
                                     <polyline points="10 9 9 9 8 9"></polyline>
                                 </svg>
-                                Last quarter
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-file-text align-text-bottom"
-                                    aria-hidden="true">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                    <polyline points="14 2 14 8 20 8"></polyline>
-                                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                                    <polyline points="10 9 9 9 8 9"></polyline>
-                                </svg>
-                                Social engagement
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-file-text align-text-bottom"
-                                    aria-hidden="true">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                    <polyline points="14 2 14 8 20 8"></polyline>
-                                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                                    <polyline points="10 9 9 9 8 9"></polyline>
-                                </svg>
-                                Year-end sale
+                                Compromisso Social
                             </a>
                         </li>
                     </ul>
@@ -227,8 +360,8 @@
                     <h1 class="h2">Dashboard</h1>
                     <div class="btn-toolbar mb-2 mb-md-0">
                         <div class="btn-group me-2">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Compartilhar</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Exportar</button>
                         </div>
                         <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -248,7 +381,7 @@
                 <canvas class="my-4 w-100 chartjs-render-monitor" id="myChart" width="602" height="254"
                     style="display: block; width: 602px; height: 254px;"></canvas>
 
-                <h2>Section title</h2>
+                <h2>Título</h2>
                 <div class="table-responsive">
                     <table class="table table-striped table-sm">
                         <thead>

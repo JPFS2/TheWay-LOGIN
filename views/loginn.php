@@ -70,7 +70,7 @@
 
 
                     <div>
-                        <a class="cta-btn align-middle" href="contato.php">Entrar</a>
+                        <a class="cta-btn align-middle" href="admin.php">Entrar</a>
                     </div>
                     <div>
                         <a href="#" class="btn-learn-more">Registrar</a>
