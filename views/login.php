@@ -54,35 +54,30 @@
         </div>
     </header> <!-- End Header -->
 
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex align-items-center">
-        <div class="container" data-aos="fade-up">
+    <!-- ======= Login ======= -->
+    <section id="cta" class="cta">
+        <div class="d-flex justify-content-center">
 
-            <div class="section-title">
-                <h2>Login</h2>
+            <div class="section-title align-items py-5">
                 <form>
-                    <div class="form-group col-md-4">
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Seu email">
+                    <h2 class="text-light">Login</h2>
+
+                    <div class="col-md-13">
+                        <input type="email" id="inputEmail" class="form-control" placeholder="Usuário" required=""
+                            autofocus="">
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required="">
                     </div>
-                    <div class="form-group col-md-4">
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+
+
+                    <div>
+                        <a class="cta-btn align-middle" href="contato.php">Entrar</a>
+                    </div>
+                    <div>
+                        <a href="#" class="btn-learn-more">Registrar</a>
                     </div>
                 </form>
-                <div>
-                    <a href="" class="btn-get-started scrollto">Entrar</a>
-                </div>
-                <div>
-                    <a href="#" class="btn-learn-more">Registrar</a>
-                </div>
             </div>
-
-
+        </div>
     </section>
-
-
-    </section>
-    <!-- ======= Downloads ======= -->
-
 
     </main>
