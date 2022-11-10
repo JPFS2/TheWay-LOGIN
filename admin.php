@@ -39,4 +39,4 @@ if (isset($_POST['btnEnviar']) and !empty($_POST['btnEnviar'])) {
   }
 
 include __DIR__ . '/views/adminn.php';
-include __DIR__ . '/includes/footer.php';
+include __DIR__ . '/includes/adminfooter.php';
