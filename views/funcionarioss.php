@@ -361,7 +361,6 @@
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Lista</h1>
                     <p class="mb-4"><a target="_blank" href="https://datatables.net"></a></p>
-
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
