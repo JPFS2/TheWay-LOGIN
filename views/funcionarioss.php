@@ -888,7 +888,7 @@
                                     <div class="form-group col-md-6">
                                         <label for="validationCustom01">Nome</label>
                                         <input type="text" class="form-control" id="validationCustom01"
-                                            placeholder="Nome" value="Mark" required>
+                                            placeholder="Nome" value="" required>
                                         <div class="valid-feedback">
                                             Tudo certo!
                                         </div>
@@ -896,7 +896,7 @@
                                     <div class="form-group col-md-6">
                                         <label for="validationCustom02">Sobrenome</label>
                                         <input type="text" class="form-control" id="validationCustom02"
-                                            placeholder="Sobrenome" value="Otto" required>
+                                            placeholder="Sobrenome" value="" required>
                                         <div class="valid-feedback">
                                             Tudo certo!
                                         </div>
