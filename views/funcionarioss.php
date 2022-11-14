@@ -59,7 +59,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
+                    <i class="fa fa-users"></i>
                     <span>Clientes</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -67,7 +67,7 @@
                         <h6 class="collapse-header">Dados</h6>
                         <a class="collapse-item" href="clientes.php">Empresa</a>
                         <a class="collapse-item" href="funcionarios.php">Funcionários</a>
-                        <a class="collapse-item" href="cards.html">Equipamentos</a>
+                        <a class="collapse-item" href="equipamentos.php">Equipamentos</a>
                     </div>
                 </div>
             </li>
