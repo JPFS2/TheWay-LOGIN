@@ -916,8 +916,8 @@
                                 </div>
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3">
-                                        <label for="validationCustom03">Função</label>
-                                        <input type="text" class="form-control" id="validationCustom03"
+                                        <label for="validationCustomname">Função</label>
+                                        <input type="text" class="form-control" id="validationCustomname"
                                             placeholder="Função" required>
                                         <div class="invalid-feedback">
                                             Por favor, informe uma função válida.
