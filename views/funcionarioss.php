@@ -73,23 +73,7 @@
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
-                    </div>
-                </div>
-            </li>
+           
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -366,7 +350,17 @@
                         <div class="card-header py-3">
                             <div class="d-sm-flex align-items-center justify-content-between mb-0">
                                 <h6 class="m-0 font-weight-bold text-primary">Dados dos Funcionários</h6>
-
+                                <div class="col align-self-center">
+                                    <div class="col-md-5 offset-md-2">
+                                        <select id="inputEstado" class="form-control">
+                                            <option selected>Empresa</option>
+                                            <option>Empresa 1</option>
+                                            <option>Empresa 2</option>
+                                            <option>Empresa 3</option>
+                                            <option>Empresa 4</option>
+                                        </select>
+                                    </div>
+                                </div>
                                 <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
                                     data-toggle="modal" data-target="#logoutModal"><i
                                         class="fas fa-plus fa-sm text-white-50"></i></a>
@@ -924,22 +918,22 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4 mb-3">
-                                    <label for="inputEstado">Empresa</label>
-                                    <select id="inputEstado" class="form-control">
-                                        <option selected>Escolher...</option>
-                                        <option>...</option>
-                                    </select>
-                                </div>   
-                                <div class="col-md-6 mb-3">
+                                        <label for="inputEstado">Empresa</label>
+                                        <select id="inputEstado" class="form-control">
+                                            <option selected>Escolher...</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
                                         <label for="validationCustom03">Telefone</label>
                                         <input type="text" class="form-control" id="validationCustom03"
                                             placeholder="Telefone" required>
                                         <div class="invalid-feedback">
                                             Por favor, inserir número de telefone.
                                         </div>
-                                    </div>                             
+                                    </div>
                                 </div>
-                               
+
                                 <div class="modal-footer">
                                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                                     <button class="btn btn-primary" type="submit">Cadastrar</button>
