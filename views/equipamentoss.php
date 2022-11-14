@@ -876,7 +876,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Cadastro de Funcionário</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Cadastro de Equipamentos</h5>
                             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">×</span>
                             </button>
@@ -885,103 +885,142 @@
                             <div class="modal-body">
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="validationCustom01">Nome</label>
-                                        <input type="text" class="form-control" id="validationCustom01"
-                                            placeholder="Nome" value="" required>
-                                        <div class="valid-feedback">
-                                            Tudo certo!
+                                        <label for="validationCustomname">Nome</label>
+                                        <input type="text" class="form-control" id="validationCustomname" placeholder=""
+                                            required>
+                                        <div class="invalid-feedback">
+                                            Por favor, informe um nome válido.
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="validationCustom02">Sobrenome</label>
-                                        <input type="text" class="form-control" id="validationCustom02"
-                                            placeholder="Sobrenome" value="" required>
-                                        <div class="valid-feedback">
-                                            Tudo certo!
-                                        </div>
+                                        <label for="inputEstado">Tipo de Equipamento</label>
+                                        <select id="inputEstado" class="form-control">
+                                            <option selected>...</option>
+                                            <option>Desktop</option>
+                                            <option>Notebook</option>
+                                            <option>Impressora</option>
+                                            <option>Maquineta</option>
+                                        </select>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="validationCustomUsername">Usuário</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="inputGroupPrepend">#</span>
-                                            </div>
-                                            <input type="text" class="form-control" id="validationCustomUsername"
-                                                placeholder="Usuário" aria-describedby="inputGroupPrepend" required>
-                                            <div class="invalid-feedback">
-                                                Por favor, escolha um nome de usuário.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="validationCustom03">Função</label>
-                                        <input type="text" class="form-control" id="validationCustom03"
-                                            placeholder="Função" required>
+                                        <label for="validationCustomname">Função</label>
+                                        <input type="text" class="form-control" id="validationCustomname" placeholder=""
+                                            required>
                                         <div class="invalid-feedback">
                                             Por favor, informe uma função válida.
                                         </div>
                                     </div>
-                                    <div class="col-md-4 mb-3">
-                                    <label for="inputEstado">Empresa</label>
-                                    <select id="inputEstado" class="form-control">
-                                        <option selected>Escolher...</option>
-                                        <option>...</option>
-                                    </select>
-                                </div>   
-                                <div class="col-md-6 mb-3">
-                                        <label for="validationCustom03">Telefone</label>
-                                        <input type="text" class="form-control" id="validationCustom03"
-                                            placeholder="Telefone" required>
+                                    <div class="form-group col-md-6">
+                                        <label for="validationCustomname">Localização</label>
+                                        <input type="text" class="form-control" id="validationCustomname" placeholder=""
+                                            required>
                                         <div class="invalid-feedback">
-                                            Por favor, inserir número de telefone.
+                                            Por favor, informe uma localização válida.
                                         </div>
-                                    </div>                             
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="validationCustomname">Senha</label>
+                                        <input type="text" class="form-control" id="validationCustomname" placeholder=""
+                                            required>
+                                        <div class="invalid-feedback">
+                                            Por favor, informe uma senha válida.
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputEstado">Empresa</label>
+                                        <select id="inputEstado" class="form-control">
+                                            <option selected>...</option>
+                                            <option>Empresa 1</option>
+                                            <option>Empresa 2</option>
+                                            <option>Empresa 3</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="validationCustom03">Acesso</label>
+                                        <input type="text" class="form-control" id="validationCustom03" placeholder=""
+                                            required>
+                                        <div class="invalid-feedback">
+                                            Por favor, inserir acesso válido.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="validationCustom03">IP</label>
+                                        <input type="text" class="form-control" id="validationCustom03" placeholder=""
+                                            required>
+                                        <div class="invalid-feedback">
+                                            Por favor, inserir IP válido.
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-check">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="flexRadioDefault1">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                    AnyDesk
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="flexRadioDefault2" checked>
+                                                <label class="form-check-label" for="flexRadioDefault2">
+                                                    Área de Trabalho Remota
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="flexRadioDefault3" checked>
+                                                <label class="form-check-label" for="flexRadioDefault3">
+                                                    TeamViewer
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                               
                                 <div class="modal-footer">
                                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                                     <button class="btn btn-primary" type="submit">Cadastrar</button>
                                 </div>
+
+
                             </div>
                     </div>
-                </div>
 
-                </form>
-                <script>
-                // Exemplo de JavaScript inicial para desativar envios de formulário, se houver campos inválidos.
-                (function() {
-                    'use strict';
-                    window.addEventListener('load', function() {
-                        // Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
-                        var forms = document.getElementsByClassName('needs-validation');
-                        // Faz um loop neles e evita o envio
-                        var validation = Array.prototype.filter.call(forms, function(form) {
-                            form.addEventListener('submit', function(event) {
-                                if (form.checkValidity() === false) {
-                                    event.preventDefault();
-                                    event.stopPropagation();
-                                }
-                                form.classList.add('was-validated');
-                            }, false);
-                        });
-                    }, false);
-                })();
-                </script>
-                <!-- Bootstrap core JavaScript-->
-                <script src="assets/vendor/jquery/jquery.min.js"></script>
-                <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                    </form>
+                    <script>
+                    // Exemplo de JavaScript inicial para desativar envios de formulário, se houver campos inválidos.
+                    (function() {
+                        'use strict';
+                        window.addEventListener('load', function() {
+                            // Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
+                            var forms = document.getElementsByClassName('needs-validation');
+                            // Faz um loop neles e evita o envio
+                            var validation = Array.prototype.filter.call(forms, function(form) {
+                                form.addEventListener('submit', function(event) {
+                                    if (form.checkValidity() === false) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add('was-validated');
+                                }, false);
+                            });
+                        }, false);
+                    })();
+                    </script>
+                    <!-- Bootstrap core JavaScript-->
+                    <script src="assets/vendor/jquery/jquery.min.js"></script>
+                    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-                <!-- Core plugin JavaScript-->
-                <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+                    <!-- Core plugin JavaScript-->
+                    <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-                <!-- Custom scripts for all pages-->
-                <script src="assets/js/sb-admin-2.min.js"></script>
+                    <!-- Custom scripts for all pages-->
+                    <script src="assets/js/sb-admin-2.min.js"></script>
 
-                <!-- Page level plugins -->
-                <script src="assets/vendor/chart.js/Chart.min.js"></script>
+                    <!-- Page level plugins -->
+                    <script src="assets/vendor/chart.js/Chart.min.js"></script>
 
-                <!-- Page level custom scripts -->
-                <script src="assets/js/demo/chart-area-demo.js"></script>
-                <script src="assets/js/demo/chart-pie-demo.js"></script>
+                    <!-- Page level custom scripts -->
+                    <script src="assets/js/demo/chart-area-demo.js"></script>
+                    <script src="assets/js/demo/chart-pie-demo.js"></script>
