@@ -471,58 +471,55 @@
                         <form class="needs-validation" novalidate>
                             <div class="modal-body">
                                 <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="validationCustom01">Nome</label>
+                                    <div class="form-group col-md-7">
+                                        <label for="validationCustom01">Nome / Apelido</label>
                                         <input type="text" class="form-control" id="validationCustom01"
                                             placeholder="Nome" value="" required>
                                         <div class="valid-feedback">
                                             Tudo certo!
                                         </div>
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="validationCustom02">Sobrenome</label>
+                                    <div class="form-group col-md-5">
+                                        <label for="validationCustom02">Telefone</label>
                                         <input type="text" class="form-control" id="validationCustom02"
-                                            placeholder="Sobrenome" value="" required>
+                                            placeholder="(xx)xxxxx-xxxx" value="" required>
                                         <div class="valid-feedback">
                                             Tudo certo!
                                         </div>
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="validationCustomUsername">Usuário</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="inputGroupPrepend">#</span>
-                                            </div>
-                                            <input type="text" class="form-control" id="validationCustomUsername"
-                                                placeholder="Usuário" aria-describedby="inputGroupPrepend" required>
-                                            <div class="invalid-feedback">
-                                                Por favor, escolha um nome de usuário.
-                                            </div>
+                                    <div class="form-group col-md-7">
+                                        <label for="validationCustom02">E-mail</label>
+                                        <input type="email" class="form-control" id="validationCustom02"
+                                            placeholder="email@email.com" value="" required>
+                                        <div class="valid-feedback">
+                                            Tudo certo!
                                         </div>
                                     </div>
+                                    <div class="form-group col-md-5">
+                                        <label for="validationCustom02">Cargo / Função</label>
+                                        <input type="text" class="form-control" id="validationCustom02"
+                                            placeholder="Digite sua função" value="" required>
+                                        <div class="valid-feedback">
+                                            Tudo certo!
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <div class="form-row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="validationCustomname">Função</label>
-                                        <input type="text" class="form-control" id="validationCustomname"
-                                            placeholder="Função" required>
-                                        <div class="invalid-feedback">
-                                            Por favor, informe uma função válida.
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 mb-3">
+                                    <div class="form-group col-md-12">
                                         <label for="inputEstado">Empresa</label>
                                         <select id="inputEstado" class="form-control">
-                                            <option selected>Escolher...</option>
-                                            <option>...</option>
+                                            <option selected>...</option>
+                                            <option >Rastor Pneus</option>
+                                            <option>Toque de ouro</option>
                                         </select>
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label for="validationCustom03">Telefone</label>
-                                        <input type="text" class="form-control" id="validationCustom03"
-                                            placeholder="Telefone" required>
-                                        <div class="invalid-feedback">
-                                            Por favor, inserir número de telefone.
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" role="switch" id="" checked>
+                                            <label class="form-check-label" for="flexSwitchCheckChecked">Ativo
+
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
