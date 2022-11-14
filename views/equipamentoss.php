@@ -326,12 +326,15 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>Nome</th>
+                                            <th>Tipo de Equipamento</th>
+                                            <th>Função</th>
+                                            <th>Localização</th>
+                                            <th>Senha</th>
+                                            <th>Empresa</th>
+                                            <th>Acesso</th>
+                                            <th>Tipo de Acesso</th>
+                                            <th>IP</th>
                                         </tr>
                                     </thead>
                                 </table>
