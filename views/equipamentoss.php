@@ -33,7 +33,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <h1 class="logo me-auto px-3"><a href="admin.php"> <img src="assets/img/logoT.png" alt="Logo"></a></h1>
+            <h1 class="logo me-auto px-3 py-2"><a href="admin.php"> <img src="assets/img/logoT.png" alt="Logo"></a></h1>
 
             </a>
 
@@ -326,15 +326,15 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
+                                            <th>Tipo</th>
                                             <th>Nome</th>
-                                            <th>Tipo de Equipamento</th>
-                                            <th>Função</th>
+                                            <th>IP</th>
                                             <th>Localização</th>
-                                            <th>Senha</th>
-                                            <th>Empresa</th>
                                             <th>Acesso</th>
                                             <th>Tipo de Acesso</th>
-                                            <th>IP</th>
+                                            <th>Senha</th>                                            
+                                            
+                                           
                                         </tr>
                                     </thead>
                                 </table>
