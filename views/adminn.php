@@ -67,30 +67,13 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Dados Clientes</h6>
                         <a class="collapse-item" href="clientes.php">Empresa</a>
-                        <a class="collapse-item" href="cards.html">Funcionários</a>
+                        <a class="collapse-item" href="funcionarios.php">Funcionários</a>
                         <a class="collapse-item" href="cards.html">Equipamentos</a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
-                    </div>
-                </div>
-            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -497,7 +480,7 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Fontes de receita</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Service Desk</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -520,13 +503,13 @@
                                     </div>
                                     <div class="mt-4 text-center small">
                                         <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Direct
+                                            <i class="fas fa-circle text-primary"></i> Encerrado
                                         </span>
                                         <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Social
+                                            <i class="fas fa-circle text-success"></i> Processando
                                         </span>
                                         <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Referência
+                                            <i class="fas fa-circle text-info"></i> Pendentes
                                         </span>
                                     </div>
                                 </div>
@@ -580,72 +563,6 @@
                             </div>
 
                             <!-- Color System -->
-                            <div class="row">
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-primary text-white shadow">
-                                        <div class="card-body">
-                                            Primary
-                                            <div class="text-white-50 small">#4e73df</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-success text-white shadow">
-                                        <div class="card-body">
-                                            Success
-                                            <div class="text-white-50 small">#1cc88a</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-info text-white shadow">
-                                        <div class="card-body">
-                                            Info
-                                            <div class="text-white-50 small">#36b9cc</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-warning text-white shadow">
-                                        <div class="card-body">
-                                            Warning
-                                            <div class="text-white-50 small">#f6c23e</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-danger text-white shadow">
-                                        <div class="card-body">
-                                            Danger
-                                            <div class="text-white-50 small">#e74a3b</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-secondary text-white shadow">
-                                        <div class="card-body">
-                                            Secondary
-                                            <div class="text-white-50 small">#858796</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-light text-black shadow">
-                                        <div class="card-body">
-                                            Light
-                                            <div class="text-black-50 small">#f8f9fc</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-dark text-white shadow">
-                                        <div class="card-body">
-                                            Dark
-                                            <div class="text-white-50 small">#5a5c69</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
                         </div>
 
@@ -661,12 +578,9 @@
                                         <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
                                             src="img/undraw_posting_photo.svg" alt="...">
                                     </div>
-                                    <p>Adicione algumas ilustrações svg de qualidade ao seu projeto, cortesia de <a
-                                            target="_blank" rel="nofollow" href="https://undraw.co/">abrir</a>, uma
-                                        coleção constantemente atualizada de belas imagens svg que você pode usar
-                                        totalmente gratuito e sem atribuição!</p>
-                                    <a target="_blank" rel="nofollow" href="https://undraw.co/">Navegue pelas ilustrações em
-                                        abrir &rarr;</a>
+                                    <p> <a
+                                            target="_blank" rel="nofollow" href=""></a></p>
+                                    <a target="_blank" rel="nofollow" href=""> &rarr;</a>
                                 </div>
                             </div>
 
@@ -676,11 +590,8 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Abordagem de Desenvolvimento</h6>
                                 </div>
                                 <div class="card-body">
-                                    <p>O SB Admin 2 faz uso extensivo das classes utilitárias do Bootstrap 4 para reduzir
-                                        Inchaço de CSS e desempenho ruim da página. As classes CSS personalizadas são usadas para criar
-                                        componentes personalizados e classes de utilitário personalizadas.</p>
-                                    <p class="mb-0">Antes de trabalhar com este tema, você deve se familiarizar com o
-                                        Framework Bootstrap, especialmente as classes utilitárias.</p>
+                                    <p></p>
+                                    <p class="mb-0"></p>
                                 </div>
                             </div>
 
