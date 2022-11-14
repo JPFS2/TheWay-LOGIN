@@ -297,13 +297,13 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Clientes</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Empresas</h1>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <div class="d-sm-flex align-items-center justify-content-between mb-0">
-                                <h6 class="m-0 font-weight-bold text-primary">Equipamentos de Trabalho</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Lista de Clientes</h6>
                                 <div class="position flex">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
