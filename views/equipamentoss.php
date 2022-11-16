@@ -67,7 +67,7 @@
                         <h6 class="collapse-header">Dados</h6>
                         <a class="collapse-item" href="clientes.php">Empresa</a>
                         <a class="collapse-item" href="funcionarios.php">Funcionários</a>
-                        <a class="collapse-item" href="cards.html">Equipamentos</a>
+                        <a class="collapse-item" href="equipamentos.php">Equipamentos</a>
                     </div>
                 </div>
             </li>
