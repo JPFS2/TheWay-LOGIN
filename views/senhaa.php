@@ -74,7 +74,7 @@
                                             </div>
                                             <hr>
 
-                                            <a href="index.html" class="btn btn-primary btn-user btn-block">
+                                            <a href="perfil.php" class="btn btn-primary btn-user btn-block">
                                                 Alterar
                                             </a>
 
