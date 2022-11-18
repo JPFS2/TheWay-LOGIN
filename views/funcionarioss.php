@@ -33,8 +33,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <h1 class="logo me-auto px-3 py-2 "><a href="admin.php"> <img src="assets/img/logoT.png" alt="Logo"></a>
-            </h1>
+            <h1 class="logo me-auto px-3"><a href="admin.php"> <img src="assets/img/logoT.png" alt="Logo"></a></h1>
 
             </a>
 
@@ -45,10 +44,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="admin.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard</span>
-                    
-                </a>
-
+                    <span>Dashboard</span></a>
             </li>
 
             <!-- Divider -->
@@ -266,31 +262,23 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-900 small">TheWaySistemas</span>
-                                <img class="img-profile rounded-circle" src="assets\img\icon.png">
+                                <img class="img-profile rounded-circle"
+                                    src="assets\img\icon.png">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="perfil.php">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Perfil
                                 </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Configurações
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Registro de Atividade
-                                </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="login.php">
+                                <a class="dropdown-item" href="login.php" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Sair
                                 </a>
                             </div>
                         </li>
-
                     </ul>
 
                 </nav>
@@ -514,7 +502,7 @@
                                         <label for="inputEstado">Empresa</label>
                                         <select id="inputEstado" class="form-control">
                                             <option selected>...</option>
-                                            <option>Rastor Pneus</option>
+                                            <option >Rastor Pneus</option>
                                             <option>Toque de ouro</option>
                                         </select>
                                     </div>
