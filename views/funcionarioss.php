@@ -262,8 +262,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-900 small">TheWaySistemas</span>
-                                <img class="img-profile rounded-circle"
-                                    src="assets\img\icon.png">
+                                <img class="img-profile rounded-circle" src="assets\img\icon.png">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -483,6 +482,75 @@
                             });
                         }, false);
                     })();
+                    </script>
+                    <script src="<?php echo SITE; ?>plugins/jquery.mask.min.js"></script>
+                    <script type="text/javascript">
+                    $(document).ready(function() {
+                        $('.cpf').mask('999.999.999-99');
+
+                        var maskBehavior = function(val) {
+                                return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' :
+                                    '(00) 0000-00009';
+                            },
+                            options = {
+                                onKeyPress: function(val, e, field, options) {
+                                    field.mask(maskBehavior.apply({}, arguments), options);
+                                }
+                            };
+
+                        $('#contato1').mask(maskBehavior, options);
+
+                        $("#formulario").submit(function(e) {
+                            //stop submitting the form to see the disabled button effect
+                            // e.preventDefault();
+                            $("#enviar").attr("disabled", true);
+                            return true;
+                        });
+
+                        $('.cpf').blur(function(event) {
+                            var cpf = $('#idUser').val();
+                            $.ajax({
+                                url: '<?php echo AJAX.'login.php?acao=verificarCPF'; ?>',
+                                type: 'GET',
+                                dataType: 'json',
+                                data: {
+                                    cpf: cpf
+                                },
+                            }).done(function(retorno) {
+                                if (retorno.status == 511) {
+                                    swal({
+                                        title: "CPF já está sendo utilizado",
+                                        type: "warning",
+                                        showConfirmButton: false,
+                                    });
+                                    window.setTimeout(function() {
+                                        $('#cpf').val("");
+                                        swal.close();
+                                    }, 2500);
+                                } else if (retorno.status == 512) {
+                                    swal({
+                                        title: "CPF Inválido, digite um válido",
+                                        type: "error",
+                                        showConfirmButton: false,
+                                    });
+                                    window.setTimeout(function() {
+                                        $('#cpf').val("");
+                                        swal.close();
+                                    }, 2500);
+                                }
+                            });
+                        });
+
+                        $('#confirmarSenhaAlt').blur(function() {
+                            if ($('#confirmarSenhaAlt').val() !== '') {
+                                if ($('#confirmarSenhaAlt').val() !== $('#senha').val()) {
+                                    $('#confirmarSenhaAlt').val('');
+                                    alert('Senhas não coincide');
+                                    return false;
+                                }
+                            }
+                        });
+                    });
                     </script>
                     <!-- Bootstrap core JavaScript-->
                     <script src="assets/vendor/jquery/jquery.min.js"></script>
