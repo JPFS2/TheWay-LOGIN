@@ -33,7 +33,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <h1 class="logo me-auto px-3"><a href="admin.php"> <img src="assets/img/logoT.png"
+            <h1 class="logo me-auto px-3 py-2"><a href="admin.php"> <img src="assets/img/logoT.png"
                         alt="Logo"></a></h1>
                 
             </a>
