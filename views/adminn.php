@@ -36,9 +36,8 @@ include('verifica_login.php');
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <h1 class="logo me-auto px-3 py-2"><a href="admin.php"> <img src="assets/img/logoT.png"
-                        alt="Logo"></a></h1>
-                
+            <h1 class="logo me-auto px-3 py-2"><a href="admin.php"> <img src="assets/img/logoT.png" alt="Logo"></a></h1>
+
             </a>
 
             <!-- Divider -->
@@ -84,7 +83,7 @@ include('verifica_login.php');
             </div>
 
             <!-- Sidebar Message -->
-            
+
 
         </ul>
         <!-- End of Sidebar -->
@@ -211,8 +210,7 @@ include('verifica_login.php');
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                            alt="...">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div class="font-weight-bold">
@@ -223,8 +221,7 @@ include('verifica_login.php');
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                            alt="...">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
                                         <div class="status-indicator"></div>
                                     </div>
                                     <div>
@@ -235,8 +232,7 @@ include('verifica_login.php');
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                                            alt="...">
+                                        <img class="rounded-circle" src="img/undraw_profile_3.svg" alt="...">
                                         <div class="status-indicator bg-warning"></div>
                                     </div>
                                     <div>
@@ -257,7 +253,8 @@ include('verifica_login.php');
                                         <div class="small text-gray-500">Galinha o Cachorro · 2w</div>
                                     </div>
                                 </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Leia mais mensagens</a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Leia mais
+                                    mensagens</a>
                             </div>
                         </li>
 
@@ -267,9 +264,8 @@ include('verifica_login.php');
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-900 small">TheWaySistemas</span>
-                                <img class="img-profile rounded-circle"
-                                    src="assets\img\icon.png">
+                                <span class="mr-2 d-none d-lg-inline text-gray-900 small"><?= $_SESSION['usuario']?></span>
+                                <img class="img-profile rounded-circle" src="assets\img\icon.png">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -279,7 +275,8 @@ include('verifica_login.php');
                                     Perfil
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="login.php" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="login.php" data-toggle="modal"
+                                    data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Sair
                                 </a>
@@ -311,7 +308,7 @@ include('verifica_login.php');
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                            Ganhos (Mensal)</div>
+                                                Ganhos (Mensal)</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">R$40.000</div>
                                         </div>
                                         <div class="col-auto">
@@ -328,8 +325,8 @@ include('verifica_login.php');
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">                                            
-                                            Ganhos (anual)</div>
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                Ganhos (anual)</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">R$215.000</div>
                                         </div>
                                         <div class="col-auto">
@@ -376,7 +373,7 @@ include('verifica_login.php');
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                            Solicitações Pendentes</div>
+                                                Solicitações Pendentes</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
                                         </div>
                                         <div class="col-auto">
@@ -527,8 +524,7 @@ include('verifica_login.php');
                                         <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
                                             src="img/undraw_posting_photo.svg" alt="...">
                                     </div>
-                                    <p> <a
-                                            target="_blank" rel="nofollow" href=""></a></p>
+                                    <p> <a target="_blank" rel="nofollow" href=""></a></p>
                                     <a target="_blank" rel="nofollow" href=""> &rarr;</a>
                                 </div>
                             </div>
@@ -599,5 +595,3 @@ include('verifica_login.php');
     <!-- Page level custom scripts -->
     <script src="assets/js/demo/chart-area-demo.js"></script>
     <script src="assets/js/demo/chart-pie-demo.js"></script>
-
-
