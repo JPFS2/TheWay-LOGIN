@@ -1,3 +1,6 @@
+<?php
+include('verifica_login.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -574,7 +577,7 @@
                 <div class="modal-body">Selecione "Sair" abaixo se estiver pronto para encerrar sua sessão atual.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.php">Sair</a>
+                    <a class="btn btn-primary" href="logout.php">Sair</a>
                 </div>
             </div>
         </div>

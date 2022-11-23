@@ -1,3 +1,6 @@
+<?php
+include('verifica_login.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 

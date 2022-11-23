@@ -1,3 +1,6 @@
+<?php
+include('verifica_login.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -262,7 +265,8 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-900 small">TheWaySistemas</span>
-                                <img class="img-profile rounded-circle" src="assets\img\icon.png">
+                                <img class="img-profile rounded-circle"
+                                    src="assets\img\icon.png">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -272,7 +276,7 @@
                                     Perfil
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="login.php" data-toggle="" data-target="#">
+                                <a class="dropdown-item" href="logout.php" data-toggle="" data-target="#">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Sair
                                 </a>

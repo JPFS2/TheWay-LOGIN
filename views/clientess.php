@@ -1,3 +1,6 @@
+<?php
+include('verifica_login.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -261,7 +264,7 @@
                                     Perfil
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="login.php" data-toggle="#" data-target="#">
+                                <a class="dropdown-item" href="logout.php" data-toggle="#" data-target="#">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Sair
                                 </a>
@@ -633,11 +636,8 @@
                                     <span aria-hidden="true">×</span>
                                 </button>
                             </div>
-                            <div class="modal-body">Selecione "Sair" abaixo se estiver pronto para encerrar sua sessão
-                                atual.</div>
                             <div class="modal-footer">
-                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                <a class="btn btn-primary" href="login.php">Sair</a>
+                                <a class="btn btn-primary" href="logout.php">Sair</a>
                             </div>
                         </div>
                     </div>

@@ -1,3 +1,6 @@
+<?php
+include('verifica_login.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -273,7 +276,7 @@
                                     Perfil
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="login.php" data-toggle="" data-target="#">
+                                <a class="dropdown-item" href="logout.php" data-toggle="" data-target="#">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Sair
                                 </a>
