@@ -375,10 +375,10 @@ include('verifica_login.php');
                                         <label for="inputEstado">Tipo de Equipamento</label>
                                         <select id="inputEstado" class="form-control">
                                             <option selected>...</option>
-                                            <option>Desktop</option>
-                                            <option>Notebook</option>
-                                            <option>Impressora</option>
-                                            <option>Maquineta</option>
+                                            <option></option>
+                                            <option></option>
+                                            <option></option>
+                                            <option></option>
                                         </select>
                                     </div>
                                     <div class="form-group col-md-6">
