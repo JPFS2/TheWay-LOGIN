@@ -292,13 +292,13 @@ include('verifica_login.php');
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">funcionarios</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Funcionários</h1>
                     <p class="mb-4"><a target="_blank" href="https://datatables.net"></a></p>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <div class="d-sm-flex align-items-center justify-content-between mb-0">
-                                <h6 class="m-0 font-weight-bold text-primary">Equipamentos de Trabalho</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Lista de funcionários</h6>
 
                                 <div class="col align-self-center">
                                     <div class="col-md-5 offset-md-2">
@@ -323,14 +323,13 @@ include('verifica_login.php');
                                     <thead>
                                         <tr>
                                             <th>Nome</th>
-                                            <th>Tipo de Equipamento</th>
-                                            <th>Função</th>
-                                            <th>Localização</th>
-                                            <th>Senha</th>
                                             <th>Empresa</th>
-                                            <th>Acesso</th>
-                                            <th>Tipo de Acesso</th>
-                                            <th>IP</th>
+                                            <th>E-mail</th>
+                                            <th>Função</th>
+                                            <th>CPF</th>
+                                            <th>Usuário</th>
+                                            <th>Senha</th>
+                                            <th>Status</th>
                                         </tr>
                                     </thead>
                                 </table>
@@ -355,7 +354,7 @@ include('verifica_login.php');
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Cadastro de Equipamentos</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Cadastro de funcionários</h5>
                             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">×</span>
                             </button>
@@ -389,24 +388,7 @@ include('verifica_login.php');
                                             Por favor, informe um e-mail válido.
                                         </div>
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="validationCustomname">Função</label>
-                                        <input type="text" class="form-control" id="validationCustomname" placeholder=""
-                                            required>
-                                        <div class="invalid-feedback">
-                                            Por favor, informe uma função válida.
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-md-6 mb-3">
-                                        <label for="validationCustom03">CPF</label>
-                                        <input type="number" class="form-control" id="validationCustom03" placeholder=""
-                                            required>
-                                        <div class="invalid-feedback">
-                                            Por favor, inserir CPF válido.
-                                        </div>
-                                    </div>
+                                    
                                     <div class="col-md-6 mb-3">
                                         <label for="validationCustom03">Usuário</label>
                                         <input type="text" class="form-control" id="validationCustom03" placeholder=""
@@ -423,17 +405,38 @@ include('verifica_login.php');
                                             Por favor, informe uma senha válida.
                                         </div>
                                     </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="validationCustomname">Função</label>
+                                        <input type="text" class="form-control" id="validationCustomname" placeholder=""
+                                            required>
+                                        <div class="invalid-feedback">
+                                            Por favor, informe uma função válida.
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="validationCustomname">Telefone</label>
+                                        <input type="text" class="form-control" id="validationCustomname" placeholder=""
+                                            required>
+                                        <div class="invalid-feedback">
+                                            Por favor, informe um número válido.
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
                                 </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-10">
+                                <div class="col-sm-1">
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" id="gridCheck1">
                                             <label class="form-check-label" for="gridCheck1">
                                                 Ativo
                                             </label>
+                                            <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                            <label class="form-check-label" for="gridCheck1">
+                                                Responsável
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
+                                                   
                                 <div class="modal-footer">
                                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                                     <button class="btn btn-primary" type="submit">Cadastrar</button>
