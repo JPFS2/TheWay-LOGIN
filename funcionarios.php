@@ -1,8 +1,9 @@
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
+include('model/conexao.php');
 
-use App\Communication\Email;
+$lista = "SELECT * from cadfunc"; 
+$con = $conexao->query($lista) or die($mysqli->error);
 
 
 

@@ -1,5 +1,5 @@
 <?php
-include('verifica_login.php');
+    include('verifica_login.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +24,7 @@ include('verifica_login.php');
 
     <!-- Custom styles for this template-->
     <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
-    
+
 </head>
 
 <body id="page-top">
@@ -299,7 +299,7 @@ include('verifica_login.php');
                         <div class="card-header py-3">
                             <div class="d-sm-flex align-items-center justify-content-between mb-0">
                                 <h6 class="m-0 font-weight-bold text-primary">Lista de funcionários</h6>
-
+                                <!-- Botão de pesquisa  -->
                                 <div class="col align-self-center">
                                     <div class="col-md-5 offset-md-2">
                                         <select id="inputEstado" class="form-control">
@@ -311,27 +311,41 @@ include('verifica_login.php');
                                         </select>
                                     </div>
                                 </div>
+
                                 <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
                                     data-toggle="modal" data-target="#logoutModal"><i
                                         class="fas fa-plus fa-sm text-white-50"></i></a>
 
                             </div>
                         </div>
+
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
                                             <th>Nome</th>
-                                            <th>Empresa</th>
-                                            <th>E-mail</th>
+                                            <th>telefone</th>
                                             <th>Função</th>
-                                            <th>CPF</th>
-                                            <th>Usuário</th>
-                                            <th>Senha</th>
-                                            <th>Status</th>
+                                            <th>E-mail</th>
+                                            <th>Data de cadastro</th>                                             
+
                                         </tr>
                                     </thead>
+                                    <tbody>
+                                        <?php  foreach($con as $lista): ?>
+                                        <tr>
+                                            <th><?= $lista['nome'] ?></th>
+                                            <th><?= $lista['tel'] ?></th>
+                                            <th><?= $lista['funcao'] ?></th>
+                                            <th><?= $lista['Email'] ?></th>                                            
+                                            <th><?= $lista['dtcadastro'] ?></th>
+                                        </tr>
+                                        <?php endforeach ?>
+
+
+                               
+                                    </tbody>
                                 </table>
                             </div>
                         </div>
@@ -388,7 +402,7 @@ include('verifica_login.php');
                                             Por favor, informe um e-mail válido.
                                         </div>
                                     </div>
-                                    
+
                                     <div class="col-md-6 mb-3">
                                         <label for="validationCustom03">Usuário</label>
                                         <input type="text" class="form-control" id="validationCustom03" placeholder=""
@@ -422,8 +436,8 @@ include('verifica_login.php');
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                </div>
-                                <div class="col-sm-1">
+                                    </div>
+                                    <div class="col-sm-1">
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" id="gridCheck1">
                                             <label class="form-check-label" for="gridCheck1">
@@ -436,7 +450,7 @@ include('verifica_login.php');
                                         </div>
                                     </div>
                                 </div>
-                                                   
+
                                 <div class="modal-footer">
                                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                                     <button class="btn btn-primary" type="submit">Cadastrar</button>
