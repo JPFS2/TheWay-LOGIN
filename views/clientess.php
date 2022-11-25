@@ -252,9 +252,9 @@ include('verifica_login.php');
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-900 small"><?= $_SESSION['usuario']?></span>
-                                <img class="img-profile rounded-circle"
-                                    src="assets\img\icon.png">
+                                <span
+                                    class="mr-2 d-none d-lg-inline text-gray-900 small"><?= $_SESSION['usuario']?></span>
+                                <img class="img-profile rounded-circle" src="assets\img\icon.png">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -318,296 +318,23 @@ include('verifica_login.php');
                                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                         <thead>
                                             <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
+                                                <th scope="col">Nome</th>
+                                                <th scope="col">Fantasia</th>
+                                                <th scope="col">CNPJ</th>
+                                                <th scope="col">Responsável</th>
+                                                <th scope="col">Status</th>
                                             </tr>
                                         </thead>
-                                        <tfoot>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                        </tfoot>
+                                        <?php while($dado = $con->fetch_array()) { ?>
                                         <tbody>
                                             <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
+                                                <td><?= $dado['cliente'] ?></td>
+                                                <td><?= $dado['fantasia'] ?></td>
+                                                <td><?= $dado['cnpj'] ?></td>
+                                                <td><?= $dado['contato'] ?></td>
+                                                <td><?= $dado['Bloqueado'] ?></td>
                                             </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Fantasia</th>
-                                                <th>CNPJ</th>
-                                                <th>Responsável</th>
-                                                <th>Status</th>
-                                            </tr>
+                                            <?php } ?>
                                         </tbody>
                                     </table>
                                 </div>
