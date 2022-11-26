@@ -392,7 +392,7 @@
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
-                    <h2>POLÍTICA DE COOKIES</h2>
+                    <h2>POLÍTICA DE COOKIE</h2>
                 </div>
 
                 <div class="row content">
