@@ -318,8 +318,18 @@
 
                             </div>
                         </div>
-
                         <div class="card-body">
+                            <?php if(isset($_SESSION['aviso'])){
+                            echo "<div class= 'alert alert-success' role='alert'>";
+                            echo $_SESSION['aviso'];
+                            echo "</div>";
+
+                            $_SESSION['aviso'] = '';
+                            unset( $_SESSION['aviso']);
+                            }
+                            ?>
+
+
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
@@ -328,23 +338,21 @@
                                             <th>telefone</th>
                                             <th>Função</th>
                                             <th>E-mail</th>
-                                            <th>Data de cadastro</th>                                             
+                                            <th>Data de cadastro</th>
 
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php  foreach($con as $lista): ?>
+                                        <?php foreach($con as $lista): ?>
                                         <tr>
                                             <th><?= $lista['nome'] ?></th>
                                             <th><?= $lista['tel'] ?></th>
                                             <th><?= $lista['funcao'] ?></th>
-                                            <th><?= $lista['Email'] ?></th>                                            
+                                            <th><?= $lista['Email'] ?></th>
                                             <th><?= $lista['dtcadastro'] ?></th>
                                         </tr>
                                         <?php endforeach ?>
 
-
-                               
                                     </tbody>
                                 </table>
                             </div>
@@ -373,13 +381,16 @@
                                 <span aria-hidden="true">×</span>
                             </button>
                         </div>
-                        <form class="needs-validation" novalidate>
+
+
+
+                        <form method='POST' action='cadastraF.php' class="needs-validation" novalidate>
                             <div class="modal-body">
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
                                         <label for="validationCustomname">Nome</label>
-                                        <input type="text" class="form-control" id="validationCustomname" placeholder=""
-                                            required>
+                                        <input type="text" name="nome" class="form-control" id="validationCustomname"
+                                            placeholder="" required>
                                         <div class="invalid-feedback">
                                             Por favor, informe um nome válido.
                                         </div>
@@ -396,7 +407,7 @@
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="validationCustomname">E-mail</label>
-                                        <input type="email" class="form-control" id="validationCustomname"
+                                        <input type="email" name="email" class="form-control" id="validationCustomname"
                                             placeholder="" required>
                                         <div class="invalid-feedback">
                                             Por favor, informe um e-mail válido.
@@ -413,24 +424,24 @@
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="validationCustomname">Senha</label>
-                                        <input type="password" class="form-control" id="validationCustomname"
-                                            placeholder="" required>
+                                        <input type="password" name="senha" class="form-control"
+                                            id="validationCustomname" placeholder="" required>
                                         <div class="invalid-feedback">
                                             Por favor, informe uma senha válida.
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="validationCustomname">Função</label>
-                                        <input type="text" class="form-control" id="validationCustomname" placeholder=""
-                                            required>
+                                        <input type="text" name="funcao" class="form-control" id="validationCustomname"
+                                            placeholder="" required>
                                         <div class="invalid-feedback">
                                             Por favor, informe uma função válida.
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="validationCustomname">Telefone</label>
-                                        <input type="text" class="form-control" id="validationCustomname" placeholder=""
-                                            required>
+                                        <input type="text" name="telefone" class="form-control"
+                                            id="validationCustomname" placeholder="" required>
                                         <div class="invalid-feedback">
                                             Por favor, informe um número válido.
                                         </div>
@@ -458,43 +469,48 @@
 
 
                             </div>
+                        </form>
                     </div>
 
-                    </form>
-                    <script>
-                    // Exemplo de JavaScript inicial para desativar envios de formulário, se houver campos inválidos.
-                    (function() {
-                        'use strict';
-                        window.addEventListener('load', function() {
-                            // Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
-                            var forms = document.getElementsByClassName('needs-validation');
-                            // Faz um loop neles e evita o envio
-                            var validation = Array.prototype.filter.call(forms, function(form) {
-                                form.addEventListener('submit', function(event) {
-                                    if (form.checkValidity() === false) {
-                                        event.preventDefault();
-                                        event.stopPropagation();
-                                    }
-                                    form.classList.add('was-validated');
-                                }, false);
-                            });
-                        }, false);
-                    })();
-                    </script>
 
-                    <!-- Bootstrap core JavaScript-->
-                    <script src="assets/vendor/jquery/jquery.min.js"></script>
-                    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-                    <!-- Core plugin JavaScript-->
-                    <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+                </div>
 
-                    <!-- Custom scripts for all pages-->
-                    <script src="assets/js/sb-admin-2.min.js"></script>
+                </form>
+                <script>
+                // Exemplo de JavaScript inicial para desativar envios de formulário, se houver campos inválidos.
+                (function() {
+                    'use strict';
+                    window.addEventListener('load', function() {
+                        // Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
+                        var forms = document.getElementsByClassName('needs-validation');
+                        // Faz um loop neles e evita o envio
+                        var validation = Array.prototype.filter.call(forms, function(form) {
+                            form.addEventListener('submit', function(event) {
+                                if (form.checkValidity() === false) {
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                }
+                                form.classList.add('was-validated');
+                            }, false);
+                        });
+                    }, false);
+                })();
+                </script>
 
-                    <!-- Page level plugins -->
-                    <script src="assets/vendor/chart.js/Chart.min.js"></script>
+                <!-- Bootstrap core JavaScript-->
+                <script src="assets/vendor/jquery/jquery.min.js"></script>
+                <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-                    <!-- Page level custom scripts -->
-                    <script src="assets/js/demo/chart-area-demo.js"></script>
-                    <script src="assets/js/demo/chart-pie-demo.js"></script>
+                <!-- Core plugin JavaScript-->
+                <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+                <!-- Custom scripts for all pages-->
+                <script src="assets/js/sb-admin-2.min.js"></script>
+
+                <!-- Page level plugins -->
+                <script src="assets/vendor/chart.js/Chart.min.js"></script>
+
+                <!-- Page level custom scripts -->
+                <script src="assets/js/demo/chart-area-demo.js"></script>
+                <script src="assets/js/demo/chart-pie-demo.js"></script>
