@@ -301,7 +301,7 @@
                         <div class="d-sm-flex align-items-center justify-content-between mb-0">
                                 <form method="POST" class="d-none d-sm-inline-block form-inline mr-auto ml-md-4 my-2 my-md-0 mw-100 navbar-search">
                                     <div class="input-group">
-                                        <input type="text" class="form-control bg-white border-1 small"
+                                        <input type="text" name="nomecliente" class="form-control bg-white border-1 small"
                                             placeholder="Pesquisar..." aria-label="Search"
                                             aria-describedby="basic-addon2">
                                         <div class="input-group-append">
@@ -345,6 +345,7 @@
                                             <th>Função</th>
                                             <th>E-mail</th>
                                             <th>Data de cadastro</th>
+                                            <th>Excluir</th>
 
                                         </tr>
                                     </thead>
@@ -356,6 +357,7 @@
                                             <th><?= $lista['funcao'] ?></th>
                                             <th><?= $lista['Email'] ?></th>
                                             <th><?= $lista['dtcadastro'] ?></th>
+                                            <th>Ex</th>
                                         </tr>
                                         <?php endforeach ?>
 
