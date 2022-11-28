@@ -1,11 +1,12 @@
 <?php
 include('model/conexao.php');
-$pesquisa = filter_input(INPUT_POST,'pesquisa');
-echo $pesquisa;
-if(!isset($pesquisa)){$pesquisa = "";}
-$lista = "SELECT * from cadcliente where cliente like '%{$pesquisa}%' and Ativo <> 'N'"; 
+$lista = "SELECT * from cadcliente where Ativo <> 'N'"; 
 $con = $conexao->query($lista) or die($mysqli->error);
 echo $lista;
+
+
+
+
 
 
 

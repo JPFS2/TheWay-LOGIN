@@ -312,15 +312,10 @@
                                     </div>
                                 </form>
 
-                                <div class="position flex">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                            Bloqueados
-                                        </label>
-                                    </div>
-                                </div>
-
+                                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                                    data-toggle="modal" data-target="#logoutModal"><i
+                                        class="fas fa-plus fa-sm text-white-50"></i></a>
+                        
                             </div>
  
                         </div>
