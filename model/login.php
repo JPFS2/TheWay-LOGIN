@@ -15,6 +15,7 @@ $query = "select usuario from usuario where usuario = '{$usuario}' and senha = m
 $result = mysqli_query($conexao, $query);
 
 $row = mysqli_num_rows($result);
+mysqli_close();
 
 if($row == 1) {
 	$_SESSION['usuario'] = $usuario;
