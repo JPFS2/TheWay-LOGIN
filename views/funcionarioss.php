@@ -1,5 +1,6 @@
 <?php
     include('verifica_login.php');
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -292,31 +293,36 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Funcionários</h1>
+                    <h1 class="h3 mb-2 tex  t-gray-800">Funcionários</h1>
                     <p class="mb-4"><a target="_blank" href="https://datatables.net"></a></p>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <div class="d-sm-flex align-items-center justify-content-between mb-0">
-                                <h6 class="m-0 font-weight-bold text-primary">Lista de funcionários</h6>
-                                <!-- Botão de pesquisa  -->
-                                <div class="col align-self-center">
-                                    <div class="col-md-5 offset-md-2">
-                                        <select id="inputEstado" class="form-control">
-                                            <option selected>Empresa</option>
-                                            <option>Empresa 1</option>
-                                            <option>Empresa 2</option>
-                                            <option>Empresa 3</option>
-                                            <option>Empresa 4</option>
-                                        </select>
+                        <div class="d-sm-flex align-items-center justify-content-between mb-0">
+                                <form method="POST" class="d-none d-sm-inline-block form-inline mr-auto ml-md-4 my-2 my-md-0 mw-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-white border-1 small"
+                                            placeholder="Pesquisar..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <div class="position flex">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Bloqueados
+                                        </label>
                                     </div>
                                 </div>
 
-                                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
-                                    data-toggle="modal" data-target="#logoutModal"><i
-                                        class="fas fa-plus fa-sm text-white-50"></i></a>
-
                             </div>
+ 
                         </div>
                         <div class="card-body">
                             <?php if(isset($_SESSION['aviso'])){
@@ -397,11 +403,13 @@
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label for="inputEstado">Empresa</label>
-                                        <select id="inputEstado" class="form-control">
+
+                                        <select id="inputEstado" name="empresa" class="form-control">
                                             <option selected></option>
-                                            <option>Empresa 1</option>
-                                            <option>Empresa 2</option>
-                                            <option>Empresa 3</option>
+                                            <?php foreach($empresas as $cliente): ?>
+                                            <option value="<?= $cliente['codcli'] ?>"><?= $cliente['fantasia'] ?>
+                                            </option>
+                                            <?php endforeach ?>
 
                                         </select>
                                     </div>
@@ -415,14 +423,6 @@
                                     </div>
 
                                     <div class="col-md-6 mb-3">
-                                        <label for="validationCustom03">Usuário</label>
-                                        <input type="text" class="form-control" id="validationCustom03" placeholder=""
-                                            required>
-                                        <div class="invalid-feedback">
-                                            Por favor, inserir Usuário válido.
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
                                         <label for="validationCustomname">Senha</label>
                                         <input type="password" name="senha" class="form-control"
                                             id="validationCustomname" placeholder="" required>
@@ -431,7 +431,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="validationCustomname">Função</label>
+                                        <label for="validationCustomname">Função / Cargo</label>
                                         <input type="text" name="funcao" class="form-control" id="validationCustomname"
                                             placeholder="" required>
                                         <div class="invalid-feedback">
@@ -446,17 +446,16 @@
                                             Por favor, informe um número válido.
                                         </div>
                                     </div>
-                                    <div class="form-group row">
-                                    </div>
-                                    <div class="col-sm-1">
+
+                                </div>
+
+                                <div class="form-group row">
+
+                                    <div class="col-sm-8">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                            <input class="form-check-input" value = "S" name="responsavel" type="checkbox" id="gridCheck1">
                                             <label class="form-check-label" for="gridCheck1">
-                                                Ativo
-                                            </label>
-                                            <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                            <label class="form-check-label" for="gridCheck1">
-                                                Responsável
+                                                Responsável Pela Empresa
                                             </label>
                                         </div>
                                     </div>
