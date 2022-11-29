@@ -9,5 +9,8 @@ $empresa = "SELECT codcli, cliente, fantasia FROM cadcliente order by cliente";
 
 $empresas = $conexao->query($empresa) or die($mysqli->error);
 
+
+
+
 include __DIR__ . '/views/equipamentoss.php';
 include __DIR__ . '/includes/adminfooter.php';
