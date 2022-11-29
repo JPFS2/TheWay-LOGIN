@@ -7,7 +7,7 @@ if(!isset($pesquisa)){
     $pesquisa = "";
 }
 
-$lista = "SELECT * from cadcliente where cliente like '%{$pesquisa}%' and Ativo <> 'N'"; 
+$lista = "SELECT * from cadcliente where Ativo <> 'N' and (cliente like '%{$pesquisa}%' or cnpj like '{$pesquisa}%')"; 
 $con = $conexao->query($lista) or die($mysqli->error);
 
 
