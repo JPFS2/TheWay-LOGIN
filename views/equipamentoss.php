@@ -303,11 +303,11 @@ include('verifica_login.php');
                                 <div class="col align-self-center">
                                     <div class="col-md-5 offset-md-2">
                                         <select id="inputEstado" class="form-control">
-                                            <option selected>Empresa</option>
-                                            <option>Empresa 1</option>
-                                            <option>Empresa 2</option>
-                                            <option>Empresa 3</option>
-                                            <option>Empresa 4</option>
+                                        <option selected></option>
+                                            <?php foreach($empresas as $cliente): ?>
+                                            <option value="<?= $cliente['codcli'] ?>"><?= $cliente['fantasia'] ?>
+                                            </option>
+                                            <?php endforeach ?>
                                         </select>
                                     </div>
                                 </div>
