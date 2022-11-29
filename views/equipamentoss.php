@@ -426,7 +426,7 @@ include('verifica_login.php');
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="validationCustomname">Senha</label>
-                                        <input type="text" name="senha" class="form-control" id="validationCustomname"
+                                        <input type="password" name="senha" class="form-control" id="validationCustomname"
                                             placeholder="" required>
                                         <div class="invalid-feedback">
                                             Por favor, informe uma senha válida.
