@@ -25,7 +25,7 @@
 
     <!-- Custom styles for this template-->
     <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body id="page-top">
@@ -353,7 +353,16 @@
                                             <th><?= $lista['funcao'] ?></th>
                                             <th><?= $lista['Email'] ?></th>
                                             <th><?= $lista['dtcadastro'] ?></th>
-                                            <th>Ex</th>
+                                            <th>
+                                                <a href="editarF.php?id=<?= $lista['codfunc'] ?>">
+                                                    <i class="fa fa-pencil-square-o" style="font-size:24px"></i>
+                                                </a>
+                                                <a href="excluirF.php?id=<?= $lista['codfunc'] ?>">
+                                                    <i class='fa fa-trash-o' style='font-size:24px'></i>
+                                                </a>
+
+
+                                            </th>
                                         </tr>
                                         <?php endforeach ?>
 
