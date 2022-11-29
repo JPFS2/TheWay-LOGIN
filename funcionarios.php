@@ -2,7 +2,6 @@
 
 include('model/conexao.php');
 
-
 $lista = "SELECT * from cadfunc"; 
 $con = $conexao->query($lista) or die($mysqli->error);
 
