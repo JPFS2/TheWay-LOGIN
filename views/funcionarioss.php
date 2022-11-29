@@ -352,7 +352,7 @@
                                             <th><?= $lista['funcao'] ?></th>
                                             <th><?= $lista['Email'] ?></th>
                                             <th><?= $lista['dtcadastro'] ?></th>
-                                            <th>Ex</th>
+                                            <th><a href="excluirF.php?id=<?= $lista['codfunc'] ?>">Excluir</th>
                                         </tr>
                                         <?php endforeach ?>
 
