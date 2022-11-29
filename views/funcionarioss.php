@@ -400,7 +400,6 @@
                                         <label for="inputEstado">Empresa</label>
 
                                         <select id="inputEstado" name="empresa" class="form-control">
-                                            <option selected></option>
                                             <?php foreach($empresas as $cliente): ?>
                                             <option value="<?= $cliente['codcli'] ?>"><?= $cliente['fantasia'] ?>
                                             </option>
