@@ -264,9 +264,9 @@ include('verifica_login.php');
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-900 small"><?= $_SESSION['usuario']?></span>
-                                <img class="img-profile rounded-circle"
-                                    src="assets\img\icon.png">
+                                <span
+                                    class="mr-2 d-none d-lg-inline text-gray-900 small"><?= $_SESSION['usuario']?></span>
+                                <img class="img-profile rounded-circle" src="assets\img\icon.png">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -318,6 +318,16 @@ include('verifica_login.php');
                             </div>
                         </div>
                         <div class="card-body">
+                            <?php if(isset($_SESSION['aviso'])){
+                            echo "<div class= 'alert alert-success' role='alert'>";
+                            echo $_SESSION['aviso'];
+                            echo "</div>";
+
+                            $_SESSION['aviso'] = '';
+                            unset( $_SESSION['aviso']);
+                            }
+                            ?>
+
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
@@ -326,13 +336,30 @@ include('verifica_login.php');
                                             <th>Tipo de Equipamento</th>
                                             <th>Função</th>
                                             <th>Localização</th>
-                                            <th>Senha</th>
                                             <th>Empresa</th>
+                                            <th>Senha</th>
                                             <th>Acesso</th>
                                             <th>Tipo de Acesso</th>
                                             <th>IP</th>
                                         </tr>
                                     </thead>
+                                    <tbody>
+                                        <?php foreach($con as $lista): ?>
+                                        <tr>
+                                            <th><?= $lista['nome'] ?></th>
+                                            <th><?= $lista['tipoequipa'] ?></th>
+                                            <th><?= $lista['funcao'] ?></th>
+                                            <th><?= $lista['localizacao'] ?></th>
+                                            <th><?= $lista['empresa'] ?></th>
+                                            <th><?= $lista['senha'] ?></th>
+                                            <th><?= $lista['acesso'] ?></th>
+                                            <th><?= $lista['tipoacesso'] ?></th>
+                                            <th><?= $lista['ip'] ?></th>
+                                        </tr>
+                                        <?php endforeach ?>
+
+                                    </tbody>
+
                                 </table>
                             </div>
                         </div>
@@ -360,20 +387,20 @@ include('verifica_login.php');
                                 <span aria-hidden="true">×</span>
                             </button>
                         </div>
-                        <form class="needs-validation" novalidate>
+                        <form method='POST' action='cadastraE.php' class="needs-validation" novalidate>
                             <div class="modal-body">
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="validationCustomname">Nome</label>
-                                        <input type="text" class="form-control" id="validationCustomname" placeholder=""
-                                            required>
+                                        <input type="text" name="nome" class="form-control" id="validationCustomname"
+                                            placeholder="" required>
                                         <div class="invalid-feedback">
                                             Por favor, informe um nome válido.
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputEstado">Tipo de Equipamento</label>
-                                        <select id="inputEstado" class="form-control">
+                                        <select name = "tipoequipa" id="inputEstado" class="form-control">
                                             <option selected>...</option>
                                             <option>Desktop</option>
                                             <option>Notebook</option>
@@ -383,41 +410,43 @@ include('verifica_login.php');
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="validationCustomname">Função</label>
-                                        <input type="text" class="form-control" id="validationCustomname" placeholder=""
-                                            required>
+                                        <input type="text" name="funcao" class="form-control" id="validationCustomname"
+                                            placeholder="" required>
                                         <div class="invalid-feedback">
                                             Por favor, informe uma função válida.
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="validationCustomname">Localização</label>
-                                        <input type="text" class="form-control" id="validationCustomname" placeholder=""
-                                            required>
+                                        <input type="text" name="localizacao" class="form-control"
+                                            id="validationCustomname" placeholder="" required>
                                         <div class="invalid-feedback">
                                             Por favor, informe uma localização válida.
                                         </div>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="validationCustomname">Senha</label>
-                                        <input type="text" class="form-control" id="validationCustomname" placeholder=""
-                                            required>
+                                        <input type="text" name="senha" class="form-control" id="validationCustomname"
+                                            placeholder="" required>
                                         <div class="invalid-feedback">
                                             Por favor, informe uma senha válida.
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputEstado">Empresa</label>
-                                        <select id="inputEstado" class="form-control">
+
+                                        <select id="inputEstado" name="empresa" class="form-control">
                                             <option selected></option>
-                                            <option>Empresa 1</option>
-                                            <option>Empresa 2</option>
-                                            <option>Empresa 3</option>
+                                            <?php foreach($empresas as $cliente): ?>
+                                            <option value="<?= $cliente['codcli'] ?>"><?= $cliente['fantasia'] ?>
+                                            </option>
+                                            <?php endforeach ?>
 
                                         </select>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="validationCustom03">Acesso</label>
-                                        <input type="text" class="form-control" id="validationCustom03" placeholder=""
+                                        <input type="text" name = "acesso" class="form-control" id="validationCustom03" placeholder=""
                                             required>
                                         <div class="invalid-feedback">
                                             Por favor, inserir acesso válido.
@@ -425,7 +454,7 @@ include('verifica_login.php');
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="validationCustom03">IP</label>
-                                        <input type="text" class="form-control" id="validationCustom03" placeholder=""
+                                        <input type="text" name = "ip" class="form-control" id="validationCustom03" placeholder=""
                                             required>
                                         <div class="invalid-feedback">
                                             Por favor, inserir IP válido.
@@ -434,21 +463,21 @@ include('verifica_login.php');
                                     <div class="form-row">
                                         <div class="form-check">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                <input name = "tipoacesso" value = "Anydesk" class="form-check-input" type="radio" name="flexRadioDefault"
                                                     id="flexRadioDefault1">
                                                 <label class="form-check-label" for="flexRadioDefault1">
                                                     AnyDesk
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                <input name = "tipoacesso" value = "Área de Trabalho Remota" class="form-check-input" type="radio" name="flexRadioDefault"
                                                     id="flexRadioDefault2" checked>
                                                 <label class="form-check-label" for="flexRadioDefault2">
                                                     Área de Trabalho Remota
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                <input name = "tipoacesso" value = "TeamViewer" class="form-check-input" type="radio" name="flexRadioDefault"
                                                     id="flexRadioDefault3" checked>
                                                 <label class="form-check-label" for="flexRadioDefault3">
                                                     TeamViewer
