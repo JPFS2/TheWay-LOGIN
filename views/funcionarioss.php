@@ -575,31 +575,9 @@
 
                 </div>
             </div>
-            <div class="modal fade" id="excluirModal" tabindex="-2" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja excluir?</h5>
-                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">Selecione "Excluir" abaixo se estiver pronto para excluir esse
-                            funcionário.</div>
-                            
-                        <div class="modal-footer">
-                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-
-                            <a class="btn btn-primary" href="excluirF.php?id=<?= $lista['codfunc'] ?>">Excluir</a>
-                        </div>
-                       
-                    </div>
-                </div>
-            </div>
             <script>
-            // Exemplo de JavaScript inicial para desativar envios de formulário, se houver campos inválidos.
-            (function() {
+                
+             (function() {
                 'use strict';
                 window.addEventListener('load', function() {
                     // Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
