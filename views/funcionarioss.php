@@ -354,18 +354,18 @@
                                             <th><?= $lista['Email'] ?></th>
                                             <th><?= $lista['dtcadastro'] ?></th>
                                             <th>
+                                                
                                             <a href="#" data-toggle="modal" data-target="#editModal">
                                                     <i class="fa fa-pencil-square-o" style="font-size:24px"></i>
                                                 </a>
-
-                                                <a href="#" data-toggle="modal" data-target="#excluirModal">
+                                                
+                                                <a href="excluirF.php?id=<?= $lista['codfunc'] ?>" onclick="return confirm('Tem certeza que deseja excluir este registro?')">
                                                     <i class='fa fa-trash-o' style='font-size:24px'></i>
                                                 </a>
-
-
+                                                <?php endforeach ?>
                                             </th>
                                         </tr>
-                                        <?php endforeach ?>
+                                        
 
                                     </tbody>
                                 </table>
