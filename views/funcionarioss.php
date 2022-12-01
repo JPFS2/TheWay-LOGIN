@@ -75,8 +75,17 @@
                     </div>
                 </div>
             </li>
-            <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
+            <div class="sidebar-heading">
+                Utilitários
+            </div>
+            <li class="nav-item active">
+                <a class="nav-link" href="uteis.php">
+                    <i class="fa fa-th-large"></i>
+                    <span>Úteis</span></a>
+            </li>
+            <!-- Divider -->
+            
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
