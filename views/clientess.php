@@ -112,6 +112,7 @@ include('verifica_login.php');
                     </button>
 
                     <!-- Topbar Search -->
+                    <h1 class="d-inline-flex p-2 h3 mb-0 tex  t-gray-999">Empresas</h1>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -289,7 +290,6 @@ include('verifica_login.php');
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Empresas</h1>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
