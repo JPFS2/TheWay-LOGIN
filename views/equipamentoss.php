@@ -36,7 +36,7 @@ include('verifica_login.php');
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <h1 class="logo me-auto px-3"><a href="admin.php"> <img src="assets/img/logoT.png" alt="Logo"></a></h1>
+            <h1 class="logo me-auto px-3 py-2"><a href="admin.php"> <img src="assets/img/logoT.png" alt="Logo"></a></h1>
 
             </a>
 
@@ -74,8 +74,17 @@ include('verifica_login.php');
                     </div>
                 </div>
             </li>
-            <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
+            <div class="sidebar-heading">
+                Utilitários
+            </div>
+            <li class="nav-item active">
+                <a class="nav-link" href="uteis.php">
+                    <i class="fa fa-th-large"></i>
+                    <span>Úteis</span></a>
+            </li>
+            <!-- Divider -->
+            
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
