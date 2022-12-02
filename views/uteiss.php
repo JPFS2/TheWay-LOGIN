@@ -102,7 +102,7 @@ include('verifica_login.php');
 
             <!-- Main Content -->
             <div id="content">
-
+                    
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
@@ -110,7 +110,7 @@ include('verifica_login.php');
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-
+                    <h1 class="d-inline-flex p-2 h3 mb-0 tex  t-gray-999">Equipamentos</h1>
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
