@@ -87,7 +87,7 @@
                     <span>Úteis</span></a>
             </li>
             <!-- Divider -->
-            
+
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -365,18 +365,84 @@
                                             <th><?= $lista['Email'] ?></th>
                                             <th><?= $lista['dtcadastro'] ?></th>
                                             <th>
-                                                
-                                            <a href="#" data-toggle="modal" data-target="#editModal">
+                                                <button type="button" class="btn btn-xs btn-warning" data-toggle="modal"
+                                                    data-target="#exampleModal" data-whatever="<?= $lista['codfunc'] ?>"
+                                                    data-whatevernome="<?= $lista['nome'] ?>"
+                                                    data-whateverdetalhes="<?= $lista['Email'] ?>">
                                                     <i class="fa fa-pencil-square-o" style="font-size:24px"></i>
-                                                </a>
-                                                
-                                                <a href="excluirF.php?id=<?= $lista['codfunc'] ?>" onclick="return confirm('Tem certeza que deseja excluir este registro?')">
+                                                </button>
+                            
+                                                <a href="excluirF.php?id=<?= $lista['codfunc'] ?>"
+                                                    onclick="return confirm('Tem certeza que deseja excluir este registro?')">
                                                     <i class='fa fa-trash-o' style='font-size:24px'></i>
                                                 </a>
-                                                <?php endforeach ?>
                                             </th>
                                         </tr>
-                                        
+                                        <?php endforeach ?>
+
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                            aria-labelledby="exampleModalLabel">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close"><span
+                                                                aria-hidden="true">&times;</span></button>
+                                                        <h4 class="modal-title" id="exampleModalLabel">Curso</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form method="POST"
+                                                            action="http://localhost/Aula/aula_anterior/26-Modal-editar-curso/processa.php"
+                                                            enctype="multipart/form-data">
+                                                            <div class="form-group">
+                                                                <label for="recipient-name"
+                                                                    class="control-label">Nome:</label>
+                                                                <input name="nome" type="text" class="form-control"
+                                                                    id="recipient-name">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="message-text"
+                                                                    class="control-label">Detalhes:</label>
+                                                                <textarea name="detalhes" class="form-control"
+                                                                    id="detalhes"></textarea>
+                                                            </div>
+                                                            <input name="id" type="hidden" class="form-control"
+                                                                id="id-curso" value="">
+
+                                                            <button type="button" class="btn btn-success"
+                                                                data-dismiss="modal">Cancelar</button>
+                                                            <button type="submit"
+                                                                class="btn btn-danger">Alterar</button>
+
+                                                        </form>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+                                        </script>
+                                        <!-- Include all compiled plugins (below), or include individual files as needed -->
+                                        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+                                        <script type="text/javascript">
+                                        $('#exampleModal').on('show.bs.modal', function(event) {
+                                            var button = $(event
+                                                .relatedTarget) // Button that triggered the modal
+                                            var recipient = button.data(
+                                                'whatever') // Extract info from data-* attributes
+                                            var recipientnome = button.data('whatevernome')
+                                            var recipientdetalhes = button.data('whateverdetalhes')
+                                            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+                                            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+                                            var modal = $(this)
+                                            modal.find('.modal-title').text('ID ' + recipient)
+                                            modal.find('#id-curso').val(recipient)
+                                            modal.find('#recipient-name').val(recipientnome)
+                                            modal.find('#detalhes').val(recipientdetalhes)
+
+                                        })
+                                        </script>
 
                                     </tbody>
                                 </table>
@@ -389,7 +455,7 @@
 
             </div>
             <!-- modalE-->
-            
+
 
             <!-- Scroll to Top Button-->
             <a class="scroll-to-top rounded" href="#page-top">
@@ -482,13 +548,9 @@
                                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                                     <button class="btn btn-primary" type="submit">Cadastrar</button>
                                 </div>
-
-
                             </div>
                         </form>
                     </div>
-
-
                 </div>
             </div>
             <!--editModal-->
@@ -508,7 +570,7 @@
                                     <div class="form-group col-md-12">
                                         <label for="validationCustomname">Nome</label>
                                         <input type="text" name="nome" class="form-control" id="validationCustomname"
-                                            placeholder="" value = "<?= $lista['nome'] ?>" required>
+                                            placeholder="" value="<?= $lista['nome'] ?>" required>
                                         <div class="invalid-feedback">
                                             Por favor, informe um nome válido.
                                         </div>
@@ -527,7 +589,7 @@
                                     <div class="form-group col-md-12">
                                         <label for="validationCustomname">E-mail</label>
                                         <input type="email" name="email" class="form-control" id="validationCustomname"
-                                            placeholder="" value = "<?= $lista['Email'] ?>" required>
+                                            placeholder="" value="<?= $lista['Email'] ?>" required>
                                         <div class="invalid-feedback">
                                             Por favor, informe um e-mail válido.
                                         </div>
@@ -536,7 +598,8 @@
                                     <div class="col-md-6 mb-3">
                                         <label for="validationCustomname">Senha</label>
                                         <input type="password" name="senha" class="form-control"
-                                            id="validationCustomname" placeholder="" value = "<?= $lista['Senha'] ?>" required>
+                                            id="validationCustomname" placeholder="" value="<?= $lista['Senha'] ?>"
+                                            required>
                                         <div class="invalid-feedback">
                                             Por favor, informe uma senha válida.
                                         </div>
@@ -544,7 +607,7 @@
                                     <div class="form-group col-md-6">
                                         <label for="validationCustomname">Função / Cargo</label>
                                         <input type="text" name="funcao" class="form-control" id="validationCustomname"
-                                            placeholder="" value = "<?= $lista['funcao'] ?>" required>
+                                            placeholder="" value="<?= $lista['funcao'] ?>" required>
                                         <div class="invalid-feedback">
                                             Por favor, informe uma função válida.
                                         </div>
@@ -552,7 +615,8 @@
                                     <div class="form-group col-md-6">
                                         <label for="validationCustomname">Telefone</label>
                                         <input type="text" name="telefone" class="form-control"
-                                            id="validationCustomname" placeholder="" value = "<?= $lista['tel'] ?>" required>
+                                            id="validationCustomname" placeholder="" value="<?= $lista['tel'] ?>"
+                                            required>
                                         <div class="invalid-feedback">
                                             Por favor, informe um número válido.
                                         </div>
@@ -564,8 +628,8 @@
 
                                     <div class="col-sm-8">
                                         <div class="form-check">
-                                            <input class="form-check-input" value="<?= $lista['responsavel'] ?>" name="responsavel" type="checkbox"
-                                                id="gridCheck1">
+                                            <input class="form-check-input" value="<?= $lista['responsavel'] ?>"
+                                                name="responsavel" type="checkbox" id="gridCheck1">
                                             <label class="form-check-label" for="gridCheck1">
                                                 Responsável Pela Empresa
                                             </label>
@@ -587,8 +651,7 @@
                 </div>
             </div>
             <script>
-                
-             (function() {
+            (function() {
                 'use strict';
                 window.addEventListener('load', function() {
                     // Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
