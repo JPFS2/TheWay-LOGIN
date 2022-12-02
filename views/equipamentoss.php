@@ -112,18 +112,7 @@ include('verifica_login.php');
                     </button>
 
                     <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Pesquisar..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                    <h1 class="d-inline-flex p-2 h3 mb-0 tex  t-gray-999">Equipamentos</h1>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -301,18 +290,16 @@ include('verifica_login.php');
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Equipamentos</h1>
                     <p class="mb-4"><a target="_blank" href="https://datatables.net"></a></p>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <div class="d-sm-flex align-items-center justify-content-between mb-0">
-                                <h6 class="m-0 font-weight-bold text-primary">Equipamentos de Trabalho</h6>
 
-                                <div class="col align-self-center">
-                                    <div class="col-md-5 offset-md-2">
+                                <div class="col-md-6 offset-md-0 align-self-start">
+                                    <div >
                                         <select id="inputEstado" class="form-control">
-                                        <option selected></option>
+                                        <option selected>Selecionar empresa ... </option>
                                             <?php foreach($empresas as $cliente): ?>
                                             <option value="<?= $cliente['codcli'] ?>"><?= $cliente['fantasia'] ?>
                                             </option>
