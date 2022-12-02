@@ -371,10 +371,12 @@
                                                     data-whateverdetalhes="<?= $lista['Email'] ?>">
                                                     <i class="fa fa-pencil-square-o" style="font-size:24px"></i>
                                                 </button>
-                            
+
                                                 <a href="excluirF.php?id=<?= $lista['codfunc'] ?>"
                                                     onclick="return confirm('Tem certeza que deseja excluir este registro?')">
-                                                    <i class='fa fa-trash-o' style='font-size:24px'></i>
+                                                    <button type="button" class="btn btn-danger">
+                                                        <i class='fa fa-trash-o' style='font-size:24px'></i>
+                                                    </button>
                                                 </a>
                                             </th>
                                         </tr>
