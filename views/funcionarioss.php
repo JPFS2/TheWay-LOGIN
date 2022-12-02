@@ -114,6 +114,8 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
+                    <h1 class="d-inline-flex p-2 h3 mb-0 tex  t-gray-999">Funcionários</h1>
+                        
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
@@ -140,7 +142,6 @@
                                 </form>
                             </div>
                         </li>
-
                         <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
@@ -290,7 +291,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 tex  t-gray-800">Funcionários</h1>
+                 
                     <p class="mb-4"><a target="_blank" href="https://datatables.net"></a></p>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
