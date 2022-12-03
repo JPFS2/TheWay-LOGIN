@@ -359,7 +359,7 @@
                                                     data-whateversenha="<?= $lista['Senha'] ?>"
                                                     data-whateverfuncao="<?= $lista['funcao'] ?>"
                                                     data-whateverphone="<?= $lista['tel'] ?>"
-                                                    data-whatevercodempresa="<?= $lista['cpdempresa'] ?>">
+                                                    data-whatevercodempresa="<?= $lista['codempresa'] ?>">
                                                     <i class="fa fa-pencil-square-o" style="font-size:24px"></i>
                                                 </button>
 
