@@ -398,11 +398,10 @@
                                                             <input name="id" type="hidden" class="form-control"
                                                                 id="id-curso" value="">
 
-                                                            <button type="button" class="btn btn-success"
+                                                            <button type="button" class="btn btn-secondary""
                                                                 data-dismiss="modal">Cancelar</button>
-                                                            <button type="submit"
-                                                                class="btn btn-danger">Alterar</button>
-
+                                                            <button class="btn btn-primary" type="submit">Alterar</button>
+                                                                <div class="modal-footer">
                                                         </form>
                                                     </div>
 
