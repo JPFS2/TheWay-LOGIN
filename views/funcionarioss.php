@@ -115,7 +115,7 @@
                     </button>
 
                     <h1 class="d-inline-flex p-2 h3 mb-0 tex  t-gray-999">Funcionários</h1>
-                        
+
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
@@ -291,7 +291,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                 
+
                     <p class="mb-4"><a target="_blank" href="https://datatables.net"></a></p>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -355,7 +355,11 @@
                                                 <button type="button" class="btn btn-xs btn-warning" data-toggle="modal"
                                                     data-target="#exampleModal" data-whatever="<?= $lista['codfunc'] ?>"
                                                     data-whatevernome="<?= $lista['nome'] ?>"
-                                                    data-whateverdetalhes="<?= $lista['Email'] ?>">
+                                                    data-whateverdetalhes="<?= $lista['Email'] ?>"
+                                                    data-whateversenha="<?= $lista['Senha'] ?>"
+                                                    data-whateverfuncao="<?= $lista['funcao'] ?>"
+                                                    data-whateverphone="<?= $lista['tel'] ?>"
+                                                    data-whatevercodempresa="<?= $lista['cpdempresa'] ?>">                                                    
                                                     <i class="fa fa-pencil-square-o" style="font-size:24px"></i>
                                                 </button>
 
@@ -380,30 +384,103 @@
                                                         <h4 class="modal-title" id="exampleModalLabel">Curso</h4>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <form method="POST"
-                                                            action="http://localhost/Aula/aula_anterior/26-Modal-editar-curso/processa.php"
-                                                            enctype="multipart/form-data">
-                                                            <div class="form-group">
-                                                                <label for="recipient-name"
-                                                                    class="control-label">Nome:</label>
-                                                                <input name="nome" type="text" class="form-control"
-                                                                    id="recipient-name">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="message-text"
-                                                                    class="control-label">Detalhes:</label>
-                                                                <textarea name="detalhes" class="form-control"
-                                                                    id="detalhes"></textarea>
-                                                            </div>
-                                                            <input name="id" type="hidden" class="form-control"
-                                                                id="id-curso" value="">
 
-                                                            <button type="button" class="btn btn-success"
-                                                                data-dismiss="modal">Cancelar</button>
-                                                            <button type="submit"
-                                                                class="btn btn-danger">Alterar</button>
+                                                        <form method='POST' action='editarf.php'
+                                                            class="needs-validation" novalidate>
+                                                            <div class="modal-body">
+                                                                <div class="form-row">
+                                                                    <div class="form-group col-md-12">
+                                                                        <label for="validationCustomname">Nome</label>
+                                                                        <input type="text" name="nome"
+                                                                            class="form-control" id="recipient-name"
+                                                                            placeholder="" required>
+                                                                        <div class="invalid-feedback">
+                                                                            Por favor, informe um nome válido.
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group col-md-12">
+                                                                        <label for="inputEstado">Empresa</label>
 
+                                                                        <select id="inputEstado" name="empresa"
+                                                                            class="form-control">
+                                                                            <?php foreach($empresas as $cliente): ?>
+                                                                            <option value="<?= $cliente['codcli'] ?>">
+                                                                                <?= $cliente['fantasia'] ?>
+                                                                            </option>
+                                                                            <?php endforeach ?>
+
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="form-group col-md-12">
+                                                                        <label for="validationCustomname">E-mail</label>
+                                                                        <input type="email" name="email"
+                                                                            class="form-control" id="detalhes"
+                                                                            placeholder="" required>
+                                                                        <div class="invalid-feedback">
+                                                                            Por favor, informe um e-mail válido.
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-md-6 mb-3">
+                                                                        <label for="validationCustomname">Senha</label>
+                                                                        <input type="password" name="senha"
+                                                                            class="form-control" id="senha"
+                                                                            placeholder="" required>
+                                                                        <div class="invalid-feedback">
+                                                                            Por favor, informe uma senha válida.
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group col-md-6">
+                                                                        <label for="validationCustomname">Função /
+                                                                            Cargo</label>
+                                                                        <input type="text" name="funcao"
+                                                                            class="form-control"
+                                                                            id="funcao" placeholder=""
+                                                                            required>
+                                                                        <div class="invalid-feedback">
+                                                                            Por favor, informe uma função válida.
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group col-md-6">
+                                                                        <label
+                                                                            for="validationCustomname">Telefone</label>
+                                                                        <input type="text" name="telefone"
+                                                                            class="form-control" id="telefone"
+                                                                            placeholder="" required>
+                                                                        <div class="invalid-feedback">
+                                                                            Por favor, informe um número válido.
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+
+                                                                <div class="form-group row">
+
+                                                                    <div class="col-sm-8">
+                                                                        <div class="form-check">
+                                                                            <input class="form-check-input"
+                                                                                value="<?= $lista['responsavel'] ?>"
+                                                                                name="responsavel" type="checkbox"
+                                                                                id="gridCheck1">
+                                                                            <label class="form-check-label"
+                                                                                for="gridCheck1">
+                                                                                Responsável Pela Empresa
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="modal-footer">
+                                                                    <button class="btn btn-secondary" type="button"
+                                                                        data-dismiss="modal">Cancel</button>
+                                                                    <button class="btn btn-primary"
+                                                                        type="submit">Editar</button>
+                                                                </div>
+
+
+                                                            </div>
                                                         </form>
+
                                                     </div>
 
                                                 </div>
@@ -421,7 +498,12 @@
                                             var recipient = button.data(
                                                 'whatever') // Extract info from data-* attributes
                                             var recipientnome = button.data('whatevernome')
+                                            var recipientfuncao = button.data('whateverfuncao')
                                             var recipientdetalhes = button.data('whateverdetalhes')
+                                            var whateversenha = button.data('whateversenha')
+                                            var whateverphone = button.data('whateverphone')
+
+
                                             // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
                                             // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
                                             var modal = $(this)
@@ -429,6 +511,11 @@
                                             modal.find('#id-curso').val(recipient)
                                             modal.find('#recipient-name').val(recipientnome)
                                             modal.find('#detalhes').val(recipientdetalhes)
+                                            modal.find('#senha').val(whateversenha)
+                                            modal.find('#telefone').val(whateverphone)
+                                            modal.find('#funcao').val(recipientfuncao)
+                                            
+
 
                                         })
                                         </script>
@@ -478,7 +565,7 @@
 
                                         <select id="inputEstado" name="empresa" class="form-control">
                                             <?php foreach($empresas as $cliente): ?>
-                                            <option value="<?= $cliente['codcli'] ?>"><?= $cliente['fantasia'] ?>
+                                            <option checkout="true" value="<?= $cliente['codcli'] ?>"><?= $cliente['fantasia'] ?>
                                             </option>
                                             <?php endforeach ?>
 
@@ -553,87 +640,7 @@
                                 <span aria-hidden="true">×</span>
                             </button>
                         </div>
-                        <form method='POST' action='editarf.php' class="needs-validation" novalidate>
-                            <div class="modal-body">
-                                <div class="form-row">
-                                    <div class="form-group col-md-12">
-                                        <label for="validationCustomname">Nome</label>
-                                        <input type="text" name="nome" class="form-control" id="validationCustomname"
-                                            placeholder="" value="<?= $lista['nome'] ?>" required>
-                                        <div class="invalid-feedback">
-                                            Por favor, informe um nome válido.
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <label for="inputEstado">Empresa</label>
 
-                                        <select id="inputEstado" name="empresa" class="form-control">
-                                            <?php foreach($empresas as $cliente): ?>
-                                            <option value="<?= $cliente['codcli'] ?>"><?= $cliente['fantasia'] ?>
-                                            </option>
-                                            <?php endforeach ?>
-
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <label for="validationCustomname">E-mail</label>
-                                        <input type="email" name="email" class="form-control" id="validationCustomname"
-                                            placeholder="" value="<?= $lista['Email'] ?>" required>
-                                        <div class="invalid-feedback">
-                                            Por favor, informe um e-mail válido.
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6 mb-3">
-                                        <label for="validationCustomname">Senha</label>
-                                        <input type="password" name="senha" class="form-control"
-                                            id="validationCustomname" placeholder="" value="<?= $lista['Senha'] ?>"
-                                            required>
-                                        <div class="invalid-feedback">
-                                            Por favor, informe uma senha válida.
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="validationCustomname">Função / Cargo</label>
-                                        <input type="text" name="funcao" class="form-control" id="validationCustomname"
-                                            placeholder="" value="<?= $lista['funcao'] ?>" required>
-                                        <div class="invalid-feedback">
-                                            Por favor, informe uma função válida.
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="validationCustomname">Telefone</label>
-                                        <input type="text" name="telefone" class="form-control"
-                                            id="validationCustomname" placeholder="" value="<?= $lista['tel'] ?>"
-                                            required>
-                                        <div class="invalid-feedback">
-                                            Por favor, informe um número válido.
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="form-group row">
-
-                                    <div class="col-sm-8">
-                                        <div class="form-check">
-                                            <input class="form-check-input" value="<?= $lista['responsavel'] ?>"
-                                                name="responsavel" type="checkbox" id="gridCheck1">
-                                            <label class="form-check-label" for="gridCheck1">
-                                                Responsável Pela Empresa
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="modal-footer">
-                                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                    <button class="btn btn-primary" type="submit">Editar</button>
-                                </div>
-
-
-                            </div>
-                        </form>
                     </div>
 
 
