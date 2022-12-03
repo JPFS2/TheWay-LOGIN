@@ -359,7 +359,7 @@
                                                     data-whateversenha="<?= $lista['Senha'] ?>"
                                                     data-whateverfuncao="<?= $lista['funcao'] ?>"
                                                     data-whateverphone="<?= $lista['tel'] ?>"
-                                                    data-whatevercodempresa="<?= $lista['cpdempresa'] ?>">                                                    
+                                                    data-whatevercodempresa="<?= $lista['cpdempresa'] ?>">
                                                     <i class="fa fa-pencil-square-o" style="font-size:24px"></i>
                                                 </button>
 
@@ -385,11 +385,17 @@
                                                     </div>
                                                     <div class="modal-body">
 
-                                                        <form method='POST' action='editarf.php' class="needs-validation" novalidate>
+                                                        <form method='POST' action='editarf.php'
+                                                            class="needs-validation" novalidate>
                                                             <div class="modal-body">
                                                                 <div class="form-row">
+
                                                                     <div class="form-group col-md-12">
                                                                         <label for="validationCustomname">Nome</label>
+
+                                                                       
+                                                                        <input type="hidden" name=" id-curso"
+                                                                            class="form-control" id="id-curso" hidde>
                                                                         <input type="text" name="nome"
                                                                             class="form-control" id="recipient-name"
                                                                             placeholder="" required>
@@ -433,9 +439,8 @@
                                                                         <label for="validationCustomname">Função /
                                                                             Cargo</label>
                                                                         <input type="text" name="funcao"
-                                                                            class="form-control"
-                                                                            id="funcao" placeholder=""
-                                                                            required>
+                                                                            class="form-control" id="funcao"
+                                                                            placeholder="" required>
                                                                         <div class="invalid-feedback">
                                                                             Por favor, informe uma função válida.
                                                                         </div>
@@ -478,7 +483,8 @@
 
 
                                                             </div>
-                                                         
+                                                        </form>
+
 
                                                     </div>
 
@@ -513,7 +519,7 @@
                                             modal.find('#senha').val(whateversenha)
                                             modal.find('#telefone').val(whateverphone)
                                             modal.find('#funcao').val(recipientfuncao)
-                                            
+
 
 
                                         })
@@ -564,7 +570,8 @@
 
                                         <select id="inputEstado" name="empresa" class="form-control">
                                             <?php foreach($empresas as $cliente): ?>
-                                            <option checkout="true" value="<?= $cliente['codcli'] ?>"><?= $cliente['fantasia'] ?>
+                                            <option checkout="true" value="<?= $cliente['codcli'] ?>">
+                                                <?= $cliente['fantasia'] ?>
                                             </option>
                                             <?php endforeach ?>
 

@@ -6,9 +6,18 @@ $nome = $_POST["nome"];
 $email = $_POST["email"];
 $funcao = $_POST["funcao"];
 $senha = $_POST["senha"];
-$lista = ["codfunc"];
+$id = $_POST["id-curso"];
 
 
-$sql = "UPDATE cadfunc SET nome ='$nome', email='$email', funcao = $funcao, senha = $senha WHERE nome ='$nome', email='$email', funcao = $funcao, senha = $senha ";
-echo $sql;
+$query = "UPDATE cadfunc SET nome ='{$nome}', email='{$email}', funcao = '{$funcao}', senha = '{$senha}' WHERE codfunc={$id}";
+
+
+if (mysqli_query($conexao, $query)) {
+    $_SESSION['aviso'] = "Atualizado com sucesso!";
+    header("Location: funcionarios.php");        
+} else {
+    $_SESSION['aviso'] = "Erro durante a atualização. Verifique os dados!".'<br>';
+    echo $query;
+    header("Location: funcionarios.php");   
+}
 ?>
