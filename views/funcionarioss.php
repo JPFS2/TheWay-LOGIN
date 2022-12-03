@@ -385,8 +385,7 @@
                                                     </div>
                                                     <div class="modal-body">
 
-                                                        <form method='POST' action='editarf.php'
-                                                            class="needs-validation" novalidate>
+                                                        <form method='POST' action='editarf.php' class="needs-validation" novalidate>
                                                             <div class="modal-body">
                                                                 <div class="form-row">
                                                                     <div class="form-group col-md-12">
@@ -479,7 +478,7 @@
 
 
                                                             </div>
-                                                        </form>
+                                                         
 
                                                     </div>
 
