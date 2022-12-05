@@ -473,15 +473,12 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-
                                                                 <div class="modal-footer">
                                                                     <button class="btn btn-secondary" type="button"
                                                                         data-dismiss="modal">Cancel</button>
                                                                     <button class="btn btn-primary"
                                                                         type="submit">Editar</button>
                                                                 </div>
-
-
                                                             </div>
                                                         </form>
 
@@ -519,9 +516,6 @@
                                             modal.find('#senha').val(whateversenha)
                                             modal.find('#telefone').val(whateverphone)
                                             modal.find('#funcao').val(recipientfuncao)
-
-
-
                                         })
                                         </script>
 
