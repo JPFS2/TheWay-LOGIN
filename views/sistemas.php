@@ -83,10 +83,6 @@
 
 
             <div class="row">
-
-
-
-
                 <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                     <div class="icon-box">
                         <div class="icon"><i class=""></i></div>
