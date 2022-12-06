@@ -41,7 +41,6 @@ if (isset($_POST['btnEnviar']) and !empty($_POST['btnEnviar'])) {
 
 }
 
-
 include __DIR__.'/includes/header.php';
 include __DIR__.'/views/home.php';
 include __DIR__.'/includes/footer.php';
