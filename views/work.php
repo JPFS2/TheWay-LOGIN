@@ -74,12 +74,7 @@
     <!-- End Hero -->
 
     <main id="main">
-
-
-
-
-
-
+        
         <!-- ======= Contact Section ======= -->
         <section id="contato" class="contato">
             <div class="container" data-aos="fade-up">
