@@ -91,8 +91,6 @@ include('verifica_login.php');
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
-            <!-- Sidebar Message -->
-
 
         </ul>
         <!-- End of Sidebar -->
