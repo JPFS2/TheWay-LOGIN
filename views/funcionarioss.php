@@ -338,7 +338,7 @@
                                             <th>telefone</th>
                                             <th>Função</th>
                                             <th>E-mail</th>
-                                            <th>Data de cadastro</th>
+                                            <th>Empresa</th>
                                             <th>Excluir</th>
 
                                         </tr>
@@ -350,7 +350,7 @@
                                             <th><?= $lista['tel'] ?></th>
                                             <th><?= $lista['funcao'] ?></th>
                                             <th><?= $lista['Email'] ?></th>
-                                            <th><?= $lista['dtcadastro'] ?></th>
+                                            <th><?= $lista['codempresa'] ?></th>
                                             <th>
                                                 <button type="button" class="btn btn-xs btn-warning" data-toggle="modal"
                                                     data-target="#exampleModal" data-whatever="<?= $lista['codfunc'] ?>"
@@ -406,8 +406,9 @@
                                                                     <div class="form-group col-md-12">
                                                                         <label for="inputEstado">Empresa</label>
 
-                                                                        <select id="inputEstado" name="empresa"
+                                                                        <select id="empresa" name="empresa"
                                                                             class="form-control">
+                                                                            <option selected="selected"></option>
                                                                             <?php foreach($empresas as $cliente): ?>
                                                                             <option value="<?= $cliente['codcli'] ?>">
                                                                                 <?= $cliente['fantasia'] ?>
@@ -504,7 +505,7 @@
                                             var recipientdetalhes = button.data('whateverdetalhes')
                                             var whateversenha = button.data('whateversenha')
                                             var whateverphone = button.data('whateverphone')
-
+                                            var whatevercodempresa= button.data('whatevercodempresa')
 
                                             // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
                                             // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
@@ -516,6 +517,7 @@
                                             modal.find('#senha').val(whateversenha)
                                             modal.find('#telefone').val(whateverphone)
                                             modal.find('#funcao').val(recipientfuncao)
+                                            modal.find('#empresa').val(whatevercodempresa)
                                         })
                                         </script>
 
@@ -537,7 +539,7 @@
                 <i class="fas fa-angle-up"></i>
             </a>
 
-            <!-- addModal-->
+            <!--AddModal-->
             <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -562,7 +564,7 @@
                                     <div class="form-group col-md-12">
                                         <label for="inputEstado">Empresa</label>
 
-                                        <select id="inputEstado" name="empresa" class="form-control">
+                                        <select id="empresa" name="empresa" class="form-control">
                                             <?php foreach($empresas as $cliente): ?>
                                             <option checkout="true" value="<?= $cliente['codcli'] ?>">
                                                 <?= $cliente['fantasia'] ?>
@@ -629,23 +631,8 @@
                     </div>
                 </div>
             </div>
-            <!--editModal-->
-            <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Editar cadastro</h5>
-                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                            </button>
-                        </div>
+        
 
-                    </div>
-
-
-                </div>
-            </div>
             <script>
             (function() {
                 'use strict';
