@@ -359,11 +359,11 @@ include('verifica_login.php');
                                                     data-target="#exampleModal"
                                                     data-whatever="<?= $lista['codequipa'] ?>"
                                                     data-whatevernome="<?= $lista['nome'] ?>"
-                                                    data-whateverdetalhes="<?= $lista['tipoequipa'] ?>"
+                                                    data-whateverdetalhes="<?= $lista['localizacao'] ?>"
                                                     data-whateversenha="<?= $lista['Senha'] ?>"
                                                     data-whateverfuncao="<?= $lista['funcao'] ?>"
                                                     data-whateverphone="<?= $lista['tel'] ?>"
-                                                    data-whatevercodempresa="<?= $lista['codempresa'] ?>">
+                                                    data-whatevercodempresa="<?= $lista['empresa'] ?>">
                                                     <i class="fa fa-pencil-square-o" style="font-size:24px"></i>
                                                 </button>
 
@@ -395,10 +395,9 @@ include('verifica_login.php');
                                                                 <div class="form-row">
                                                                     <div class="form-group col-md-6">
                                                                         <label for="validationCustomname">Nome</label>
-                                                                        <input type="text" name="recipient-name"
-                                                                            class="form-control"
-                                                                            id="recipient-name" placeholder=""
-                                                                            required>
+                                                                        <input type="text" name="recipient-name "
+                                                                            class="form-control" id="recipient-name"
+                                                                            placeholder="" required>
                                                                         <div class="invalid-feedback">
                                                                             Por favor, informe um nome válido.
                                                                         </div>
@@ -409,28 +408,19 @@ include('verifica_login.php');
                                                                         <select name="tipoequipa" id="inputEstado"
                                                                             class="form-control">
                                                                             <option selected>...</option>
-                                                                            <option>Desktop</option>
-                                                                            <option>Notebook</option>
+                                                                            <option>Computador</option>
+                                                                            <option>Mobile</option>
                                                                             <option>Impressora</option>
                                                                             <option>Maquineta</option>
                                                                         </select>
                                                                     </div>
-                                                                    <div class="form-group col-md-6">
-                                                                        <label for="validationCustomname">Função</label>
-                                                                        <input type="text" name="funcao"
-                                                                            class="form-control"
-                                                                            id="validationCustomname" placeholder=""
-                                                                            required>
-                                                                        <div class="invalid-feedback">
-                                                                            Por favor, informe uma função válida.
-                                                                        </div>
-                                                                    </div>
+                                                                    
                                                                     <div class="form-group col-md-6">
                                                                         <label
                                                                             for="validationCustomname">Localização</label>
                                                                         <input type="text" name="localizacao"
                                                                             class="form-control"
-                                                                            id="validationCustomname" placeholder=""
+                                                                            id="localizacao" placeholder=""
                                                                             required>
                                                                         <div class="invalid-feedback">
                                                                             Por favor, informe uma localização válida.
@@ -446,12 +436,12 @@ include('verifica_login.php');
                                                                             Por favor, informe uma senha válida.
                                                                         </div>
                                                                     </div>
-                                                                    <div class="form-group col-md-6">
+                                                                    <div class="form-group col-md-12">
                                                                         <label for="inputEstado">Empresa</label>
 
-                                                                        <select id="inputEstado" name="empresa"
+                                                                        <select id="empresa" name="empresa"
                                                                             class="form-control">
-                                                                            <option selected></option>
+                                                                            <option selected="selected"></option>
                                                                             <?php foreach($empresas as $cliente): ?>
                                                                             <option value="<?= $cliente['codcli'] ?>">
                                                                                 <?= $cliente['fantasia'] ?>
@@ -699,7 +689,7 @@ include('verifica_login.php');
                         modal.find('.modal-title').text('ID ' + recipient)
                         modal.find('#id-curso').val(recipient)
                         modal.find('#recipient-name').val(recipientnome)
-                        modal.find('#detalhes').val(recipientdetalhes)
+                        modal.find('#localizacao').val(recipientdetalhes)
                         modal.find('#senha').val(whateversenha)
                         modal.find('#telefone').val(whateverphone)
                         modal.find('#funcao').val(recipientfuncao)
