@@ -329,13 +329,8 @@ include('verifica_login.php');
                                     <thead>
                                         <tr>
                                             <th>Nome</th>
-                                            
-                                            
                                             <th>Localização</th>
-                                            <th>Empresa</th>
-                                            
-                                            
-                                        
+                                            <th>Empresa</th>              
                                             <th>IP</th>
                                             <th>Ação</th>
                                         </tr>
@@ -363,7 +358,7 @@ include('verifica_login.php');
                                                 <button type="button" class="btn btn-xs btn-warning" data-toggle="modal"
                                                     data-target="#exampleModal" data-whatever="<?= $lista['codfunc'] ?>"
                                                     data-whatevernome="<?= $lista['nome'] ?>"
-                                                    data-whateverdetalhes="<?= $lista['Email'] ?>"
+                                                    data-whateverdetalhes="<?= $lista['tipoequipa'] ?>"
                                                     data-whateversenha="<?= $lista['Senha'] ?>"
                                                     data-whateverfuncao="<?= $lista['funcao'] ?>"
                                                     data-whateverphone="<?= $lista['tel'] ?>"
@@ -380,6 +375,135 @@ include('verifica_login.php');
                                             </th>
                                         </tr>
                                         <?php endforeach ?>
+
+            <!-- modaEdit-->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="exampleModalLabel">Curso</h4>
+                        </div>
+                        <div class="modal-body">
+
+                        <form method='POST' action='cadastraE.php' class="needs-validation" novalidate>
+                            <div class="modal-body">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="validationCustomname">Nome</label>
+                                        <input type="text" name="nome" class="form-control" id="validationCustomname"
+                                            placeholder="" required>
+                                        <div class="invalid-feedback">
+                                            Por favor, informe um nome válido.
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputEstado">Tipo de Equipamento</label>
+                                        <select name = "tipoequipa" id="inputEstado" class="form-control">
+                                            <option selected>...</option>
+                                            <option>Desktop</option>
+                                            <option>Notebook</option>
+                                            <option>Impressora</option>
+                                            <option>Maquineta</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="validationCustomname">Função</label>
+                                        <input type="text" name="funcao" class="form-control" id="validationCustomname"
+                                            placeholder="" required>
+                                        <div class="invalid-feedback">
+                                            Por favor, informe uma função válida.
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="validationCustomname">Localização</label>
+                                        <input type="text" name="localizacao" class="form-control"
+                                            id="validationCustomname" placeholder="" required>
+                                        <div class="invalid-feedback">
+                                            Por favor, informe uma localização válida.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="validationCustomname">Senha</label>
+                                        <input type="password" name="senha" class="form-control" id="validationCustomname"
+                                            placeholder="" required>
+                                        <div class="invalid-feedback">
+                                            Por favor, informe uma senha válida.
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputEstado">Empresa</label>
+
+                                        <select id="inputEstado" name="empresa" class="form-control">
+                                            <option selected></option>
+                                            <?php foreach($empresas as $cliente): ?>
+                                            <option value="<?= $cliente['codcli'] ?>"><?= $cliente['fantasia'] ?>
+                                            </option>
+                                            <?php endforeach ?>
+
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="validationCustom03">Acesso</label>
+                                        <input type="text" name = "acesso" class="form-control" id="validationCustom03" placeholder=""
+                                            required>
+                                        <div class="invalid-feedback">
+                                            Por favor, inserir acesso válido.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="validationCustom03">IP</label>
+                                        <input type="text" name = "ip" class="form-control" id="validationCustom03" placeholder=""
+                                            required>
+                                        <div class="invalid-feedback">
+                                            Por favor, inserir IP válido.
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-check">
+                                            <div class="form-check">
+                                                <input name = "tipoacesso" value = "Anydesk" class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="flexRadioDefault1">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                    AnyDesk
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input name = "tipoacesso" value = "Área de Trabalho Remota" class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="flexRadioDefault2" checked>
+                                                <label class="form-check-label" for="flexRadioDefault2">
+                                                    Área de Trabalho Remota
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input name = "tipoacesso" value = "TeamViewer" class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="flexRadioDefault3" checked>
+                                                <label class="form-check-label" for="flexRadioDefault3">
+                                                    TeamViewer
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                    <button class="btn btn-primary" type="submit">Cadastrar</button>
+                                </div>
+
+
+                            </div>
+                            </form>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
 
                                     </tbody>
 
