@@ -329,14 +329,15 @@ include('verifica_login.php');
                                     <thead>
                                         <tr>
                                             <th>Nome</th>
-                                            <th>Tipo de Equipamento</th>
-                                            <th>Função</th>
+                                            
+                                            
                                             <th>Localização</th>
                                             <th>Empresa</th>
-                                            <th>Senha</th>
-                                            <th>Acesso</th>
-                                            <th>Tipo de Acesso</th>
+                                            
+                                            
+                                        
                                             <th>IP</th>
+                                            <th>Ação</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -344,13 +345,39 @@ include('verifica_login.php');
                                         <tr>
                                             <th><?= $lista['nome'] ?></th>
                                             <th><?= $lista['tipoequipa'] ?></th>
-                                            <th><?= $lista['funcao'] ?></th>
-                                            <th><?= $lista['localizacao'] ?></th>
-                                            <th><?= $lista['empresa'] ?></th>
-                                            <th><?= $lista['senha'] ?></th>
-                                            <th><?= $lista['acesso'] ?></th>
-                                            <th><?= $lista['tipoacesso'] ?></th>
+                                            <th>
+                                                <?php 
+                                                foreach($empresas as $cliente):
+                                                if ($lista['empresa'] == $cliente['codcli']){
+                                                    echo  $cliente['fantasia'] ;    
+                                                }                                             
+                                                                                           
+                                                endforeach ?>
+                                            </th>                                         
+                                    
                                             <th><?= $lista['ip'] ?></th>
+                                         
+                                           
+                                            <th>
+                                             
+                                                <button type="button" class="btn btn-xs btn-warning" data-toggle="modal"
+                                                    data-target="#exampleModal" data-whatever="<?= $lista['codfunc'] ?>"
+                                                    data-whatevernome="<?= $lista['nome'] ?>"
+                                                    data-whateverdetalhes="<?= $lista['Email'] ?>"
+                                                    data-whateversenha="<?= $lista['Senha'] ?>"
+                                                    data-whateverfuncao="<?= $lista['funcao'] ?>"
+                                                    data-whateverphone="<?= $lista['tel'] ?>"
+                                                    data-whatevercodempresa="<?= $lista['codempresa'] ?>">
+                                                    <i class="fa fa-pencil-square-o" style="font-size:24px"></i>
+                                                </button>
+
+                                                <a href="excluirE.php?id=<?= $lista['codfunc'] ?>"
+                                                    onclick="return confirm('Tem certeza que deseja excluir este registro?')">
+                                                    <button type="button" class="btn btn-danger">
+                                                        <i class='fa fa-trash-o' style='font-size:24px'></i>
+                                                    </button>
+                                                </a>
+                                            </th>
                                         </tr>
                                         <?php endforeach ?>
 
