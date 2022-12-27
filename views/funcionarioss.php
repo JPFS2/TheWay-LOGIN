@@ -350,8 +350,17 @@
                                             <th><?= $lista['tel'] ?></th>
                                             <th><?= $lista['funcao'] ?></th>
                                             <th><?= $lista['Email'] ?></th>
-                                            <th><?= $lista['codempresa'] ?></th>
                                             <th>
+                                                <?php 
+                                                foreach($empresas as $cliente):
+                                                if ($lista['codempresa'] == $cliente['codcli']){
+                                                    echo  $cliente['fantasia'] ;    
+                                                }                                             
+                                                                                           
+                                                endforeach ?>
+                                            </th>
+                                        <th>
+                                             
                                                 <button type="button" class="btn btn-xs btn-warning" data-toggle="modal"
                                                     data-target="#exampleModal" data-whatever="<?= $lista['codfunc'] ?>"
                                                     data-whatevernome="<?= $lista['nome'] ?>"
@@ -373,153 +382,6 @@
                                         </tr>
                                         <?php endforeach ?>
 
-                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                                            aria-labelledby="exampleModalLabel">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal"
-                                                            aria-label="Close"><span
-                                                                aria-hidden="true">&times;</span></button>
-                                                        <h4 class="modal-title" id="exampleModalLabel">Curso</h4>
-                                                    </div>
-                                                    <div class="modal-body">
-
-                                                        <form method='POST' action='editarf.php'
-                                                            class="needs-validation" novalidate>
-                                                            <div class="modal-body">
-                                                                <div class="form-row">
-
-                                                                    <div class="form-group col-md-12">
-                                                                        <label for="validationCustomname">Nome</label>
-
-                                                                       
-                                                                        <input type="hidden" name=" id-curso"
-                                                                            class="form-control" id="id-curso" hidde>
-                                                                        <input type="text" name="nome"
-                                                                            class="form-control" id="recipient-name"
-                                                                            placeholder="" required>
-                                                                        <div class="invalid-feedback">
-                                                                            Por favor, informe um nome válido.
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="form-group col-md-12">
-                                                                        <label for="inputEstado">Empresa</label>
-
-                                                                        <select id="empresa" name="empresa"
-                                                                            class="form-control">
-                                                                            <option selected="selected"></option>
-                                                                            <?php foreach($empresas as $cliente): ?>
-                                                                            <option value="<?= $cliente['codcli'] ?>">
-                                                                                <?= $cliente['fantasia'] ?>
-                                                                            </option>
-                                                                            <?php endforeach ?>
-
-                                                                        </select>
-                                                                    </div>
-                                                                    <div class="form-group col-md-12">
-                                                                        <label for="validationCustomname">E-mail</label>
-                                                                        <input type="email" name="email"
-                                                                            class="form-control" id="detalhes"
-                                                                            placeholder="" required>
-                                                                        <div class="invalid-feedback">
-                                                                            Por favor, informe um e-mail válido.
-                                                                        </div>
-                                                                    </div>
-
-                                                                    <div class="col-md-6 mb-3">
-                                                                        <label for="validationCustomname">Senha</label>
-                                                                        <input type="password" name="senha"
-                                                                            class="form-control" id="senha"
-                                                                            placeholder="" required>
-                                                                        <div class="invalid-feedback">
-                                                                            Por favor, informe uma senha válida.
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="form-group col-md-6">
-                                                                        <label for="validationCustomname">Função /
-                                                                            Cargo</label>
-                                                                        <input type="text" name="funcao"
-                                                                            class="form-control" id="funcao"
-                                                                            placeholder="" required>
-                                                                        <div class="invalid-feedback">
-                                                                            Por favor, informe uma função válida.
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="form-group col-md-6">
-                                                                        <label
-                                                                            for="validationCustomname">Telefone</label>
-                                                                        <input type="text" name="telefone"
-                                                                            class="form-control" id="telefone"
-                                                                            placeholder="" required>
-                                                                        <div class="invalid-feedback">
-                                                                            Por favor, informe um número válido.
-                                                                        </div>
-                                                                    </div>
-
-                                                                </div>
-
-                                                                <div class="form-group row">
-
-                                                                    <div class="col-sm-8">
-                                                                        <div class="form-check">
-                                                                            <input class="form-check-input"
-                                                                                value="<?= $lista['responsavel'] ?>"
-                                                                                name="responsavel" type="checkbox"
-                                                                                id="gridCheck1">
-                                                                            <label class="form-check-label"
-                                                                                for="gridCheck1">
-                                                                                Responsável Pela Empresa
-                                                                            </label>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button class="btn btn-secondary" type="button"
-                                                                        data-dismiss="modal">Cancel</button>
-                                                                    <button class="btn btn-primary"
-                                                                        type="submit">Editar</button>
-                                                                </div>
-                                                            </div>
-                                                        </form>
-
-
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
-                                        </script>
-                                        <!-- Include all compiled plugins (below), or include individual files as needed -->
-                                        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-                                        <script type="text/javascript">
-                                        $('#exampleModal').on('show.bs.modal', function(event) {
-                                            var button = $(event
-                                                .relatedTarget) // Button that triggered the modal
-                                            var recipient = button.data(
-                                                'whatever') // Extract info from data-* attributes
-                                            var recipientnome = button.data('whatevernome')
-                                            var recipientfuncao = button.data('whateverfuncao')
-                                            var recipientdetalhes = button.data('whateverdetalhes')
-                                            var whateversenha = button.data('whateversenha')
-                                            var whateverphone = button.data('whateverphone')
-                                            var whatevercodempresa= button.data('whatevercodempresa')
-
-                                            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-                                            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-                                            var modal = $(this)
-                                            modal.find('.modal-title').text('ID ' + recipient)
-                                            modal.find('#id-curso').val(recipient)
-                                            modal.find('#recipient-name').val(recipientnome)
-                                            modal.find('#detalhes').val(recipientdetalhes)
-                                            modal.find('#senha').val(whateversenha)
-                                            modal.find('#telefone').val(whateverphone)
-                                            modal.find('#funcao').val(recipientfuncao)
-                                            modal.find('#empresa').val(whatevercodempresa)
-                                        })
-                                        </script>
 
                                     </tbody>
                                 </table>
@@ -531,7 +393,140 @@
                 <!-- /.container-fluid -->
 
             </div>
-            <!-- modalE-->
+            <!-- modaEdit-->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="exampleModalLabel">Curso</h4>
+                        </div>
+                        <div class="modal-body">
+
+                            <form method='POST' action='editarf.php' class="needs-validation" novalidate>
+                                <div class="modal-body">
+                                    <div class="form-row">
+
+                                        <div class="form-group col-md-12">
+                                            <label for="validationCustomname">Nome</label>
+
+
+                                            <input type="hidden" name=" id-curso" class="form-control" id="id-curso"
+                                                hidde>
+                                            <input type="text" name="nome" class="form-control" id="recipient-name"
+                                                placeholder="" required>
+                                            <div class="invalid-feedback">
+                                                Por favor, informe um nome válido.
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            <label for="inputEstado">Empresa</label>
+
+                                            <select id="empresa" name="empresa" class="form-control">
+                                                <option selected="selected"></option>
+                                                <?php foreach($empresas as $cliente): ?>
+                                                <option value="<?= $cliente['codcli'] ?>">
+                                                    <?= $cliente['fantasia'] ?>
+                                                </option>
+                                                <?php endforeach ?>
+
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            <label for="validationCustomname">E-mail</label>
+                                            <input type="email" name="email" class="form-control" id="detalhes"
+                                                placeholder="" required>
+                                            <div class="invalid-feedback">
+                                                Por favor, informe um e-mail válido.
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-3">
+                                            <label for="validationCustomname">Senha</label>
+                                            <input type="password" name="senha" class="form-control" id="senha"
+                                                placeholder="" required>
+                                            <div class="invalid-feedback">
+                                                Por favor, informe uma senha válida.
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="validationCustomname">Função /
+                                                Cargo</label>
+                                            <input type="text" name="funcao" class="form-control" id="funcao"
+                                                placeholder="" required>
+                                            <div class="invalid-feedback">
+                                                Por favor, informe uma função válida.
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="validationCustomname">Telefone</label>
+                                            <input type="text" name="telefone" class="form-control" id="telefone"
+                                                placeholder="" required>
+                                            <div class="invalid-feedback">
+                                                Por favor, informe um número válido.
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group row">
+
+                                        <div class="col-sm-8">
+                                            <div class="form-check">
+                                                <input class="form-check-input" value="<?= $lista['responsavel'] ?>"
+                                                    name="responsavel" type="checkbox" id="gridCheck1">
+                                                <label class="form-check-label" for="gridCheck1">
+                                                    Responsável Pela Empresa
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-secondary" type="button"
+                                            data-dismiss="modal">Cancel</button>
+                                        <button class="btn btn-primary" type="submit">Editar</button>
+                                    </div>
+                                </div>
+                            </form>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+            </script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+            <script type="text/javascript">
+            $('#exampleModal').on('show.bs.modal', function(event) {
+                var button = $(event
+                    .relatedTarget) // Button that triggered the modal
+                var recipient = button.data(
+                    'whatever') // Extract info from data-* attributes
+                var recipientnome = button.data('whatevernome')
+                var recipientfuncao = button.data('whateverfuncao')
+                var recipientdetalhes = button.data('whateverdetalhes')
+                var whateversenha = button.data('whateversenha')
+                var whateverphone = button.data('whateverphone')
+                var whatevercodempresa = button.data('whatevercodempresa')
+
+                // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+                // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+                var modal = $(this)
+                modal.find('.modal-title').text('ID ' + recipient)
+                modal.find('#id-curso').val(recipient)
+                modal.find('#recipient-name').val(recipientnome)
+                modal.find('#detalhes').val(recipientdetalhes)
+                modal.find('#senha').val(whateversenha)
+                modal.find('#telefone').val(whateverphone)
+                modal.find('#funcao').val(recipientfuncao)
+                modal.find('#empresa').val(whatevercodempresa)
+            })
+            </script>
 
 
             <!-- Scroll to Top Button-->
@@ -631,7 +626,7 @@
                     </div>
                 </div>
             </div>
-        
+
 
             <script>
             (function() {
