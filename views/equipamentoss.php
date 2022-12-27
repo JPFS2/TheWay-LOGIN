@@ -24,7 +24,7 @@ include('verifica_login.php');
 
     <!-- Custom styles for this template-->
     <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body id="page-top">
@@ -371,7 +371,7 @@ include('verifica_login.php');
                                                     <i class="fa fa-pencil-square-o" style="font-size:24px"></i>
                                                 </button>
 
-                                                <a href="excluirE.php?id=<?= $lista['codfunc'] ?>"
+                                                <a href="excluirE.php?id=<?= $lista['codequipa'] ?>"
                                                     onclick="return confirm('Tem certeza que deseja excluir este registro?')">
                                                     <button type="button" class="btn btn-danger">
                                                         <i class='fa fa-trash-o' style='font-size:24px'></i>
