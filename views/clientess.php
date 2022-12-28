@@ -307,22 +307,22 @@ include('verifica_login.php');
 
 
 
-                                        <div class="position flex">
+                                    </div>
+                                    <div class="position absolute">
+                                            <div class="form-group ">
 
-                                            <div class="form-group row">
-
-                                                <div class="col-sm-8">
+                                                <div class="col-sm-12">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" value="S" name="responsavel"
+                                                        <input class="form-check-input" value="N" name="responsavel"
                                                             type="checkbox" id="gridCheck1">
                                                         <label class="form-check-label" for="gridCheck1">
-                                                            Responsável Pela Empresa
+                                                            Somente bloqueados
                                                         </label>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                               
                                 </form>
                             </div>
 
@@ -342,7 +342,9 @@ include('verifica_login.php');
                                         </thead>
                                         <?php while($dado = $con->fetch_array()) { ?>
                                         <tbody>
-                                            <tr>
+                                            <tr <?php
+                                                     echo $dado['Bloqueado'] == 'S' ? 'class="alert alert-danger"' : '' 
+                                                  ?>>
                                                 <td><?= $dado['cliente'] ?></td>
                                                 <td><?= $dado['fantasia'] ?></td>
                                                 <td><?= $dado['cnpj'] ?></td>
