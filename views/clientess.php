@@ -337,19 +337,17 @@ include('verifica_login.php');
                                                 <th scope="col">Fantasia</th>
                                                 <th scope="col">CNPJ</th>
                                                 <th scope="col">Responsável</th>
-                                                <th scope="col">Status</th>
+                                                <th scope="col">Telefone</th>
                                             </tr>
                                         </thead>
                                         <?php while($dado = $con->fetch_array()) { ?>
                                         <tbody>
-                                            <tr <?php
-                                                     echo $dado['Bloqueado'] == 'S' ? 'class="alert alert-danger"' : '' 
-                                                  ?>>
+                                            <tr <?php echo $dado['Bloqueado'] == 'S' ? 'class="table-danger"' : ''  ?>>
                                                 <td><?= $dado['cliente'] ?></td>
                                                 <td><?= $dado['fantasia'] ?></td>
                                                 <td><?= $dado['cnpj'] ?></td>
                                                 <td><?= $dado['contato'] ?></td>
-                                                <td><?= $dado['Bloqueado'] ?></td>
+                                                <td><?= $dado['tel1'] ?></td>
                                             </tr>
                                             <?php } ?>
                                         </tbody>
