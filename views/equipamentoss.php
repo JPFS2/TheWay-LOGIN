@@ -298,19 +298,20 @@ include('verifica_login.php');
 
                                 <div class="col-md-6 offset-md-0 align-self-start">
                                     <div>
-                                    <form method='POST' action='equipamentos.php'
-                                    class="d-none d-sm-inline-block form-inline mr-auto ml-md-4 my-2 my-md-0 mw-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" name="pesquisa" class="form-control bg-white border-1 small"
-                                            placeholder="Pesquisar..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="submit">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
+                                        <form method='POST' action='equipamentos.php'
+                                            class="d-none d-sm-inline-block form-inline mr-auto ml-md-4 my-2 my-md-0 mw-100 navbar-search">
+                                            <div class="input-group">
+                                                <input type="text" name="pesquisa"
+                                                    class="form-control bg-white border-1 small"
+                                                    placeholder="Pesquisar..." aria-label="Search"
+                                                    aria-describedby="basic-addon2">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-primary" type="submit">
+                                                        <i class="fas fa-search fa-sm"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                                 <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
@@ -335,9 +336,9 @@ include('verifica_login.php');
                                     <thead>
                                         <tr>
                                             <th>Nome</th>
-                                            <th>Localização</th>
+                                            <th>Tipo</th>
                                             <th>Empresa</th>
-                                            <th>IP</th>
+                                            <th>Localização</th>
                                             <th>Ação</th>
                                         </tr>
                                     </thead>
@@ -367,7 +368,7 @@ include('verifica_login.php');
                                                     data-whatevernome="<?= $lista['nome'] ?>"
                                                     data-whateverdetalhes="<?= $lista['localizacao'] ?>"
                                                     data-whateversenha="<?= $lista['Senha'] ?>"
-                                                    data-whateverfuncao="<?= $lista['funcao'] ?>"
+                                                    data-whatevertipo="<?= $lista['tipoequipa'] ?>"
                                                     data-whateverphone="<?= $lista['tel'] ?>"
                                                     data-whatevercodempresa="<?= $lista['empresa'] ?>">
                                                     <i class="fa fa-pencil-square-o" style="font-size:24px"></i>
@@ -399,7 +400,7 @@ include('verifica_login.php');
                                                             class="needs-validation" novalidate>
                                                             <div class="modal-body">
                                                                 <div class="form-row">
-                                                                    <div class="form-group col-md-6">
+                                                                    <div class="form-group col-md-7">
                                                                         <label for="validationCustomname">Nome</label>
                                                                         <input type="text" name="recipient-name "
                                                                             class="form-control" id="recipient-name"
@@ -408,40 +409,19 @@ include('verifica_login.php');
                                                                             Por favor, informe um nome válido.
                                                                         </div>
                                                                     </div>
-                                                                    <div class="form-group col-md-6">
+                                                                    <div class="form-group col-md-5">
                                                                         <label for="inputEstado">Tipo de
                                                                             Equipamento</label>
-                                                                        <select name="tipoequipa" id="inputEstado"
+                                                                        <select name="tipoequipa" id="tipoequipa"
                                                                             class="form-control">
-                                                                            <option selected>...</option>
+                                                                            <option selected></option>
                                                                             <option>Computador</option>
                                                                             <option>Mobile</option>
                                                                             <option>Impressora</option>
                                                                             <option>Maquineta</option>
                                                                         </select>
                                                                     </div>
-                                                                    
-                                                                    <div class="form-group col-md-6">
-                                                                        <label
-                                                                            for="validationCustomname">Localização</label>
-                                                                        <input type="text" name="localizacao"
-                                                                            class="form-control"
-                                                                            id="localizacao" placeholder=""
-                                                                            required>
-                                                                        <div class="invalid-feedback">
-                                                                            Por favor, informe uma localização válida.
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-md-6 mb-3">
-                                                                        <label for="validationCustomname">Senha</label>
-                                                                        <input type="password" name="senha"
-                                                                            class="form-control"
-                                                                            id="validationCustomname" placeholder=""
-                                                                            required>
-                                                                        <div class="invalid-feedback">
-                                                                            Por favor, informe uma senha válida.
-                                                                        </div>
-                                                                    </div>
+
                                                                     <div class="form-group col-md-12">
                                                                         <label for="inputEstado">Empresa</label>
 
@@ -456,6 +436,26 @@ include('verifica_login.php');
 
                                                                         </select>
                                                                     </div>
+                                                                    <div class="form-group col-md-7">
+                                                                        <label
+                                                                            for="validationCustomname">Localização</label>
+                                                                        <input type="text" name="localizacao"
+                                                                            class="form-control"
+                                                                            id="validationCustomname" placeholder=""
+                                                                            required>
+                                                                        <div class="invalid-feedback">
+                                                                            Por favor, informe uma localização válida.
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-5 mb-3">
+                                                                        <label for="validationCustom03">IP</label>
+                                                                        <input type="text" name="ip"
+                                                                            class="form-control" id="validationCustom03"
+                                                                            placeholder="" required>
+                                                                        <div class="invalid-feedback">
+                                                                            Por favor, inserir IP válido.
+                                                                        </div>
+                                                                    </div>
                                                                     <div class="col-md-6 mb-3">
                                                                         <label for="validationCustom03">Acesso</label>
                                                                         <input type="text" name="acesso"
@@ -466,12 +466,13 @@ include('verifica_login.php');
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-6 mb-3">
-                                                                        <label for="validationCustom03">IP</label>
-                                                                        <input type="text" name="ip"
-                                                                            class="form-control" id="validationCustom03"
-                                                                            placeholder="" required>
+                                                                        <label for="validationCustomname">Senha</label>
+                                                                        <input type="password" name="senha"
+                                                                            class="form-control"
+                                                                            id="validationCustomname" placeholder=""
+                                                                            required>
                                                                         <div class="invalid-feedback">
-                                                                            Por favor, inserir IP válido.
+                                                                            Por favor, informe uma senha válida.
                                                                         </div>
                                                                     </div>
                                                                     <div class="form-row">
@@ -575,9 +576,9 @@ include('verifica_login.php');
                                     <div class="form-group col-md-6">
                                         <label for="inputEstado">Tipo de Equipamento</label>
                                         <select name="tipoequipa" id="inputEstado" class="form-control">
-                                            <option selected>...</option>
-                                            <option>Desktop</option>
-                                            <option>Notebook</option>
+                                            <option selected></option>
+                                            <option>Computador</option>
+                                            <option>Mobile</option>
                                             <option>Impressora</option>
                                             <option>Maquineta</option>
                                         </select>
@@ -683,7 +684,7 @@ include('verifica_login.php');
                         var recipient = button.data(
                             'whatever') // Extract info from data-* attributes
                         var recipientnome = button.data('whatevernome')
-                        var recipientfuncao = button.data('whateverfuncao')
+                        var whatevertipo = button.data('whatevertipo')
                         var recipientdetalhes = button.data('whateverdetalhes')
                         var whateversenha = button.data('whateversenha')
                         var whateverphone = button.data('whateverphone')
@@ -698,7 +699,7 @@ include('verifica_login.php');
                         modal.find('#localizacao').val(recipientdetalhes)
                         modal.find('#senha').val(whateversenha)
                         modal.find('#telefone').val(whateverphone)
-                        modal.find('#funcao').val(recipientfuncao)
+                        modal.find('#tipoequipa').val(whatevertipo)
                         modal.find('#empresa').val(whatevercodempresa)
                     })
                     </script>
