@@ -7,18 +7,13 @@ $bloqueado = filter_input(INPUT_POST,'responsavel');
 
 
 
-if(!isset($pesquisa)){
+if(!isset($pesquisa))
     $pesquisa = "";
-}
-
-if(!isset($bloqueado)){
+if(!isset($bloqueado))
     $bloqueado = 'N';
-}
+
 
 $lista = "SELECT * from cadcliente where Bloqueado = '{$bloqueado}' and ativo <> 'N' and (cliente like '%{$pesquisa}%' or cnpj like '{$pesquisa}%')"; 
-
-
-
 $con = $conexao->query($lista) or die($mysqli->error);
 
 

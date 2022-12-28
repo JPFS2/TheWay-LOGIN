@@ -298,13 +298,19 @@ include('verifica_login.php');
 
                                 <div class="col-md-6 offset-md-0 align-self-start">
                                     <div>
-                                        <select id="inputEstado" class="form-control">
-                                            <option selected>Selecionar empresa ... </option>
-                                            <?php foreach($empresas as $cliente): ?>
-                                            <option value="<?= $cliente['codcli'] ?>"><?= $cliente['fantasia'] ?>
-                                            </option>
-                                            <?php endforeach ?>
-                                        </select>
+                                    <form method='POST' action='equipamentos.php'
+                                    class="d-none d-sm-inline-block form-inline mr-auto ml-md-4 my-2 my-md-0 mw-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" name="pesquisa" class="form-control bg-white border-1 small"
+                                            placeholder="Pesquisar..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="submit">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
                                     </div>
                                 </div>
                                 <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
