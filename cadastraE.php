@@ -11,11 +11,9 @@ $senha = filter_input(INPUT_POST,'senha');
 $acesso = filter_input(INPUT_POST,'acesso');
 $tipoacesso = filter_input(INPUT_POST,'tipoacesso');
 $ip = filter_input(INPUT_POST,'ip');
+$tipoacesso = filter_input(INPUT_POST,'tipoacesso');
 
-
-
-
-if($nome && $ip){
+if($nome){
     
     $query = "INSERT INTO cadequipa(nome, tipoequipa, funcao,localizacao, empresa, senha, acesso, tipoacesso, ip) VALUES ('{$nome}','{$tipoequipa}','{$funcao}','{$localizacao}','{$empresa}',{$senha},'{$acesso}','{$tipoacesso}','{$ip}')";
     

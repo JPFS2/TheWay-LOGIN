@@ -357,7 +357,7 @@ include('verifica_login.php');
                                                 endforeach ?>
                                             </th>
 
-                                            <th><?= $lista['ip'] ?></th>
+                                            <th><?= $lista['localizacao'] ?></th>
 
 
                                             <th>
@@ -367,9 +367,11 @@ include('verifica_login.php');
                                                     data-whatever="<?= $lista['codequipa'] ?>"
                                                     data-whatevernome="<?= $lista['nome'] ?>"
                                                     data-whateverdetalhes="<?= $lista['localizacao'] ?>"
+                                                    data-whateveracesso="<?= $lista['acesso'] ?>"
+                                                    data-whatevertipoacesso="<?= $lista['tipoacesso'] ?>"
                                                     data-whateversenha="<?= $lista['Senha'] ?>"
                                                     data-whatevertipo="<?= $lista['tipoequipa'] ?>"
-                                                    data-whateverphone="<?= $lista['tel'] ?>"
+                                                    data-whateverip="<?= $lista['ip'] ?>"
                                                     data-whatevercodempresa="<?= $lista['empresa'] ?>">
                                                     <i class="fa fa-pencil-square-o" style="font-size:24px"></i>
                                                 </button>
@@ -396,13 +398,15 @@ include('verifica_login.php');
                                                         <h4 class="modal-title" id="exampleModalLabel">Curso</h4>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <form method='POST' action='cadastraE.php'
+                                                        <form method='POST' action='EditarE.php'
                                                             class="needs-validation" novalidate>
                                                             <div class="modal-body">
                                                                 <div class="form-row">
                                                                     <div class="form-group col-md-7">
                                                                         <label for="validationCustomname">Nome</label>
-                                                                        <input type="text" name="recipient-name "
+                                                                        <input type="hidden" name=" id-curso" class="form-control" id="id-curso"
+                                                hidde>
+                                                                        <input type="text" name="recipient-name"
                                                                             class="form-control" id="recipient-name"
                                                                             placeholder="" required>
                                                                         <div class="invalid-feedback">
@@ -440,9 +444,8 @@ include('verifica_login.php');
                                                                         <label
                                                                             for="validationCustomname">Localização</label>
                                                                         <input type="text" name="localizacao"
-                                                                            class="form-control"
-                                                                            id="validationCustomname" placeholder=""
-                                                                            required>
+                                                                            class="form-control" id="localizacao"
+                                                                            placeholder="" required>
                                                                         <div class="invalid-feedback">
                                                                             Por favor, informe uma localização válida.
                                                                         </div>
@@ -450,8 +453,8 @@ include('verifica_login.php');
                                                                     <div class="col-md-5 mb-3">
                                                                         <label for="validationCustom03">IP</label>
                                                                         <input type="text" name="ip"
-                                                                            class="form-control" id="validationCustom03"
-                                                                            placeholder="" required>
+                                                                            class="form-control" id="ip" placeholder=""
+                                                                            required>
                                                                         <div class="invalid-feedback">
                                                                             Por favor, inserir IP válido.
                                                                         </div>
@@ -459,7 +462,7 @@ include('verifica_login.php');
                                                                     <div class="col-md-6 mb-3">
                                                                         <label for="validationCustom03">Acesso</label>
                                                                         <input type="text" name="acesso"
-                                                                            class="form-control" id="validationCustom03"
+                                                                            class="form-control" id="acesso"
                                                                             placeholder="" required>
                                                                         <div class="invalid-feedback">
                                                                             Por favor, inserir acesso válido.
@@ -467,48 +470,20 @@ include('verifica_login.php');
                                                                     </div>
                                                                     <div class="col-md-6 mb-3">
                                                                         <label for="validationCustomname">Senha</label>
-                                                                        <input type="password" name="senha"
-                                                                            class="form-control"
-                                                                            id="validationCustomname" placeholder=""
-                                                                            required>
+                                                                        <input type="text" name="senha"
+                                                                            class="form-control" id="senha"
+                                                                            placeholder="" required>
                                                                         <div class="invalid-feedback">
                                                                             Por favor, informe uma senha válida.
                                                                         </div>
                                                                     </div>
-                                                                    <div class="form-row">
-                                                                        <div class="form-check">
-                                                                            <div class="form-check">
-                                                                                <input name="tipoacesso" value="Anydesk"
-                                                                                    class="form-check-input"
-                                                                                    type="radio" name="flexRadioDefault"
-                                                                                    id="flexRadioDefault1">
-                                                                                <label class="form-check-label"
-                                                                                    for="flexRadioDefault1">
-                                                                                    AnyDesk
-                                                                                </label>
-                                                                            </div>
-                                                                            <div class="form-check">
-                                                                                <input name="tipoacesso"
-                                                                                    value="Área de Trabalho Remota"
-                                                                                    class="form-check-input"
-                                                                                    type="radio" name="flexRadioDefault"
-                                                                                    id="flexRadioDefault2" checked>
-                                                                                <label class="form-check-label"
-                                                                                    for="flexRadioDefault2">
-                                                                                    Área de Trabalho Remota
-                                                                                </label>
-                                                                            </div>
-                                                                            <div class="form-check">
-                                                                                <input name="tipoacesso"
-                                                                                    value="TeamViewer"
-                                                                                    class="form-check-input"
-                                                                                    type="radio" name="flexRadioDefault"
-                                                                                    id="flexRadioDefault3" checked>
-                                                                                <label class="form-check-label"
-                                                                                    for="flexRadioDefault3">
-                                                                                    TeamViewer
-                                                                                </label>
-                                                                            </div>
+                                                                    <div class="col-md-6 mb-3">
+                                                                        <label for="validationCustomname">Tipo de acesso</label>
+                                                                        <input type="text" name="tipoacesso"
+                                                                            class="form-control" id="tipoacesso"
+                                                                            placeholder="" required>
+                                                                        <div class="invalid-feedback">
+                                                                            Por favor, informe uma senha válida.
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -516,7 +491,7 @@ include('verifica_login.php');
                                                                     <button class="btn btn-secondary" type="button"
                                                                         data-dismiss="modal">Cancel</button>
                                                                     <button class="btn btn-primary"
-                                                                        type="submit">Cadastrar</button>
+                                                                        type="submit">Editar</button>
                                                                 </div>
 
 
@@ -564,108 +539,112 @@ include('verifica_login.php');
                         </div>
                         <form method='POST' action='cadastraE.php' class="needs-validation" novalidate>
                             <div class="modal-body">
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="validationCustomname">Nome</label>
-                                        <input type="text" name="nome" class="form-control" id="validationCustomname"
-                                            placeholder="" required>
-                                        <div class="invalid-feedback">
-                                            Por favor, informe um nome válido.
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="inputEstado">Tipo de Equipamento</label>
-                                        <select name="tipoequipa" id="inputEstado" class="form-control">
-                                            <option selected></option>
-                                            <option>Computador</option>
-                                            <option>Mobile</option>
-                                            <option>Impressora</option>
-                                            <option>Maquineta</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="validationCustomname">Função</label>
-                                        <input type="text" name="funcao" class="form-control" id="validationCustomname"
-                                            placeholder="" required>
-                                        <div class="invalid-feedback">
-                                            Por favor, informe uma função válida.
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="validationCustomname">Localização</label>
-                                        <input type="text" name="localizacao" class="form-control"
-                                            id="validationCustomname" placeholder="" required>
-                                        <div class="invalid-feedback">
-                                            Por favor, informe uma localização válida.
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="validationCustomname">Senha</label>
-                                        <input type="password" name="senha" class="form-control"
-                                            id="validationCustomname" placeholder="" required>
-                                        <div class="invalid-feedback">
-                                            Por favor, informe uma senha válida.
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="inputEstado">Empresa</label>
+                                <form method='POST' action='cadastraE.php' class="needs-validation" novalidate>
+                                    <div class="modal-body">
+                                        <div class="form-row">
+                                            <div class="form-group col-md-7">
+                                                <label for="validationCustomname">Nome</label>
+                                                <input type="text" name="nome" class="form-control" id="nome"
+                                                    placeholder="" required>
+                                                <div class="invalid-feedback">
+                                                    Por favor, informe um nome válido.
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-5">
+                                                <label for="inputEstado">Tipo de
+                                                    Equipamento</label>
+                                                <select name="tipoequipa" id="tipoequipa" class="form-control">
+                                                    <option selected></option>
+                                                    <option>Computador</option>
+                                                    <option>Mobile</option>
+                                                    <option>Impressora</option>
+                                                    <option>Maquineta</option>
+                                                </select>
+                                            </div>
 
-                                        <select id="inputEstado" name="empresa" class="form-control">
-                                            <option selected></option>
-                                            <?php foreach($empresas as $cliente): ?>
-                                            <option value="<?= $cliente['codcli'] ?>"><?= $cliente['fantasia'] ?>
-                                            </option>
-                                            <?php endforeach ?>
+                                            <div class="form-group col-md-12">
+                                                <label for="inputEstado">Empresa</label>
 
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="validationCustom03">Acesso</label>
-                                        <input type="text" name="acesso" class="form-control" id="validationCustom03"
-                                            placeholder="" required>
-                                        <div class="invalid-feedback">
-                                            Por favor, inserir acesso válido.
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="validationCustom03">IP</label>
-                                        <input type="text" name="ip" class="form-control" id="validationCustom03"
-                                            placeholder="" required>
-                                        <div class="invalid-feedback">
-                                            Por favor, inserir IP válido.
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-check">
-                                            <div class="form-check">
-                                                <input name="tipoacesso" value="Anydesk" class="form-check-input"
-                                                    type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                                <label class="form-check-label" for="flexRadioDefault1">
-                                                    AnyDesk
-                                                </label>
+                                                <select id="empresa" name="empresa" class="form-control">
+                                                    <option selected="selected"></option>
+                                                    <?php foreach($empresas as $cliente): ?>
+                                                    <option value="<?= $cliente['codcli'] ?>">
+                                                        <?= $cliente['fantasia'] ?>
+                                                    </option>
+                                                    <?php endforeach ?>
+
+                                                </select>
                                             </div>
-                                            <div class="form-check">
-                                                <input name="tipoacesso" value="Área de Trabalho Remota"
-                                                    class="form-check-input" type="radio" name="flexRadioDefault"
-                                                    id="flexRadioDefault2" checked>
-                                                <label class="form-check-label" for="flexRadioDefault2">
-                                                    Área de Trabalho Remota
-                                                </label>
+                                            <div class="form-group col-md-7">
+                                                <label for="validationCustomname">Localização</label>
+                                                <input type="text" name="localizacao" class="form-control"
+                                                    id="validationCustomname" placeholder="" required>
+                                                <div class="invalid-feedback">
+                                                    Por favor, informe uma localização válida.
+                                                </div>
                                             </div>
-                                            <div class="form-check">
-                                                <input name="tipoacesso" value="TeamViewer" class="form-check-input"
-                                                    type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
-                                                <label class="form-check-label" for="flexRadioDefault3">
-                                                    TeamViewer
-                                                </label>
+                                            <div class="col-md-5 mb-3">
+                                                <label for="validationCustom03">IP</label>
+                                                <input type="text" name="ip" class="form-control"
+                                                    id="validationCustom03" placeholder="" required>
+                                                <div class="invalid-feedback">
+                                                    Por favor, inserir IP válido.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="validationCustom03">Acesso</label>
+                                                <input type="text" name="acesso" class="form-control"
+                                                    id="validationCustom03" placeholder="" required>
+                                                <div class="invalid-feedback">
+                                                    Por favor, inserir acesso válido.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="validationCustomname">Senha</label>
+                                                <input type="password" name="senha" class="form-control" id="senha"
+                                                    placeholder="" required>
+                                                <div class="invalid-feedback">
+                                                    Por favor, informe uma senha válida.
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-check">
+                                                    <div class="form-check">
+                                                        <input name="tipoacesso" value="Anydesk"
+                                                            class="form-check-input" type="radio"
+                                                            name="flexRadioDefault" id="flexRadioDefault1">
+                                                        <label class="form-check-label" for="flexRadioDefault1">
+                                                            AnyDesk
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input name="tipoacesso" value="Área de Trabalho Remota"
+                                                            class="form-check-input" type="radio"
+                                                            name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                            Área de Trabalho Remota
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input name="tipoacesso" value="TeamViewer"
+                                                            class="form-check-input" type="radio"
+                                                            name="flexRadioDefault" id="flexRadioDefault3" checked>
+                                                        <label class="form-check-label" for="flexRadioDefault3">
+                                                            TeamViewer
+                                                        </label>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-secondary" type="button"
+                                                data-dismiss="modal">Cancel</button>
+                                            <button class="btn btn-primary" type="submit">Cadastrar</button>
+                                        </div>
+
+
                                     </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                    <button class="btn btn-primary" type="submit">Cadastrar</button>
-                                </div>
+                                </form>
 
 
                             </div>
@@ -687,8 +666,11 @@ include('verifica_login.php');
                         var whatevertipo = button.data('whatevertipo')
                         var recipientdetalhes = button.data('whateverdetalhes')
                         var whateversenha = button.data('whateversenha')
-                        var whateverphone = button.data('whateverphone')
+                        var whateverip = button.data('whateverip')
                         var whatevercodempresa = button.data('whatevercodempresa')
+                        var whateveracesso = button.data('whateveracesso')
+                        var whatevertipoacesso = button.data('whatevertipoacesso')
+
 
                         // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
                         // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
@@ -698,9 +680,12 @@ include('verifica_login.php');
                         modal.find('#recipient-name').val(recipientnome)
                         modal.find('#localizacao').val(recipientdetalhes)
                         modal.find('#senha').val(whateversenha)
-                        modal.find('#telefone').val(whateverphone)
+                        modal.find('#ip').val(whateverip)
                         modal.find('#tipoequipa').val(whatevertipo)
+                        modal.find('#acesso').val(whateveracesso)
                         modal.find('#empresa').val(whatevercodempresa)
+                        modal.find('#tipoacesso').val(whatevertipoacesso)
+
                     })
                     </script>
 
