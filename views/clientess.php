@@ -84,7 +84,7 @@ include('verifica_login.php');
                     <span>Úteis</span></a>
             </li>
             <!-- Divider -->
-            
+
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -296,7 +296,7 @@ include('verifica_login.php');
                                 <form method='POST' action='clientes.php'
                                     class="d-none d-sm-inline-block form-inline mr-auto ml-md-4 my-2 my-md-0 mw-100 navbar-search">
                                     <div class="input-group">
-                                        <input type="text" name = "pesquisa" class="form-control bg-white border-1 small"
+                                        <input type="text" name="pesquisa" class="form-control bg-white border-1 small"
                                             placeholder="Pesquisar..." aria-label="Search"
                                             aria-describedby="basic-addon2">
                                         <div class="input-group-append">
@@ -304,18 +304,26 @@ include('verifica_login.php');
                                                 <i class="fas fa-search fa-sm"></i>
                                             </button>
                                         </div>
+
+
+
+                                        <div class="position flex">
+
+                                            <div class="form-group row">
+
+                                                <div class="col-sm-8">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" value="S" name="responsavel"
+                                                            type="checkbox" id="gridCheck1">
+                                                        <label class="form-check-label" for="gridCheck1">
+                                                            Responsável Pela Empresa
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </form>
-
-                                <div class="position flex">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                            Bloqueados
-                                        </label>
-                                    </div>
-                                </div>
-
                             </div>
 
 

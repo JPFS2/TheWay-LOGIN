@@ -359,7 +359,7 @@
                                                                                            
                                                 endforeach ?>
                                             </th>
-                                        <th>
+                                            <th>
                                              
                                                 <button type="button" class="btn btn-xs btn-warning" data-toggle="modal"
                                                     data-target="#exampleModal" data-whatever="<?= $lista['codfunc'] ?>"
