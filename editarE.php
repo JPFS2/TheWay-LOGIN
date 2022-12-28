@@ -23,7 +23,7 @@ if (mysqli_query($conexao, $query)) {
    header("Location: equipamentos.php");   
   
 } else {
-    $_SESSION['aviso'] = "Erro durante a atualização. Verifique os dados!".'<br>';
+    $_SESSION['aviso'] = "Erro durante a atualização. Verifique os dados !".'<br>';
     echo $query;
     header("Location: equipamentos.php");   
 }
