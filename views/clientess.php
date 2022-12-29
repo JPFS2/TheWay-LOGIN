@@ -304,9 +304,6 @@ include('verifica_login.php');
                                                 <i class="fas fa-search fa-sm"></i>
                                             </button>
                                         </div>
-
-
-
                                     </div>
                                     <div class="position absolute">
                                             <div class="form-group ">
