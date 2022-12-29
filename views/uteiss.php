@@ -285,6 +285,17 @@ include('verifica_login.php');
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
+
+                    <div class="input-group p-3">
+                        <form class="input-group py-2" method="POST" action='uteis.php' enctype="multipart/form-data">
+                            <input type="file" name="arquivo" class="form-control" id="inputGroupFile04"
+                                aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                            <button class="btn btn-outline-secondary" type="submit"
+                                id="inputGroupFileAddon04">Enviar</button>
+                        </form>
+                    </div>
+
+
                     <!-- Content Row -->
                     <div class="row">
 
@@ -295,7 +306,7 @@ include('verifica_login.php');
                         $diretorio = dir($pasta);
 
                         while(($arquivo = $diretorio->read()) !== false) {
-
+                        if($arquivo != '.' and $arquivo != '..'){                        
                         echo "                        
                         <div class='col-xl-3 col-md-6 mb-4'>
                             <div class='card border-left-primary shadow h-100 py-2'>
@@ -315,6 +326,7 @@ include('verifica_login.php');
                             </div>
                         </div>
                         ";
+                    }
 
                         }
 
@@ -326,24 +338,8 @@ include('verifica_login.php');
 
 
 
-                        
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                APP 1</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><a
-                                                    href="https://thewaysistemas.com/">R$40.000</a></div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fa fa-download fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+
                     </div>
 
                     <!-- Scroll to Top Button-->
