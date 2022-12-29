@@ -351,6 +351,7 @@
                                             <th><?= $lista['funcao'] ?></th>
                                             <th><?= $lista['Email'] ?></th>
                                             <th>
+                                                
                                                 <?php 
                                                 foreach($empresas as $cliente):
                                                 if ($lista['codempresa'] == $cliente['codcli']){

@@ -11,7 +11,7 @@ $empresas = $conexao->query($empresa) or die($mysqli->error);
 
 $pesquisa = filter_input(INPUT_POST,'pesquisa');
 if(!isset($pesquisa)){$pesquisa = "";}
-$lista = "SELECT * from cadfunc where nome like '%{$pesquisa}%' order by codempresa"; 
+$lista = "SELECT cadfunc.*, cadcliente.cliente from cadfunc JOIN cadcliente on cadfunc.codempresa = cadcliente.codcli where cadcliente.fantasia like '%{$pesquisa}%' order by codempresa"; 
 $con = $conexao->query($lista) or die($mysqli->error);
 
 
