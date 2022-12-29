@@ -284,14 +284,17 @@ include('verifica_login.php');
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <div class="input-group p-3">
+
+
+                     <div class="input-group p-3">
                         <form class="input-group py-2" method="POST" action='uteis.php' enctype="multipart/form-data">
-                            <input type="file" name="arquivo" class="custom-file-input" id="inputGroupFile04"
+                            <input type="file" name="arquivo" class="form-control" id="inputGroupFile04"
                                 aria-describedby="inputGroupFileAddon04" aria-label="Upload">
                             <button class="btn btn-outline-secondary" type="submit"
                                 id="inputGroupFileAddon04">Enviar</button>
                         </form>
-                    </div>
+                    </div> 
+                    
 
 
                     <!-- Content Row -->
@@ -325,10 +328,19 @@ include('verifica_login.php');
                         </div>
                         ";
                     }
+
                         }
 
                         $diretorio->close();
                         ?>
+
+
+
+
+
+
+
+
                     </div>
 
                     <!-- Scroll to Top Button-->
