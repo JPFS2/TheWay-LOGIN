@@ -306,20 +306,20 @@ include('verifica_login.php');
                                         </div>
                                     </div>
                                     <div class="position absolute">
-                                            <div class="form-group ">
+                                        <div class="form-group ">
 
-                                                <div class="col-sm-12">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" value="N" name="responsavel"
-                                                            type="checkbox" id="gridCheck1">
-                                                        <label class="form-check-label" for="gridCheck1">
-                                                            Somente bloqueados
-                                                        </label>
-                                                    </div>
+                                            <div class="col-sm-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" value="N" name="responsavel"
+                                                        type="checkbox" id="gridCheck1">
+                                                    <label class="form-check-label" for="gridCheck1">
+                                                        Somente bloqueados
+                                                    </label>
                                                 </div>
                                             </div>
                                         </div>
-                               
+                                    </div>
+
                                 </form>
                             </div>
 
